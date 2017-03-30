@@ -1,5 +1,5 @@
 
-var detailapp=angular.module('detailapp',[]);
+var detailapp=angular.module('detailapp',['lazyload']);
 
 detailapp.config(["$httpProvider", function ($httpProvider) {
     $httpProvider.defaults.transformRequest=function(obj){

@@ -267,10 +267,11 @@ margin-right: .1rem;
   color:#fff;
 }
 .hotel--more{
-  font-size:.18rem;
-  display:block;
-  text-align:center;
-  margin-top:.15rem;
+     font-size: .18rem;
+    display: block;
+    text-align: center;
+    margin-top: .15rem;
+    padding-bottom: .15rem;
 }
 .hotel--more .hotel--more-text{
   color:#999;
@@ -378,9 +379,10 @@ margin-right: .1rem;
   width:1rem;
 }
 .hotel-reviews .review .user-pic img{
-  float:left;
-  width:.8rem;
-  height:.8rem;
+    float: left;
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 50%;
 }
 .hotel-reviews .review .hotel-content .review-header{
   float:left;
