@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="../css/dh_common.css">
+  <link rel="stylesheet" type="text/css" href="../css/detail.css">
+  <script src="../libs/jquery/jquery-2.1.1.min.js"></script>
+  <script src="../libs/angular/angular.min.js"></script>
+  <script src="../client_js/detail-event.js"></script>
+  <script src="../client_js/getUrl.js"></script>
+</head>
+<body ng-app='detailapp' ng-controller='detailCtrll'>
+  <div class="hidden">
+  <div class="mask">
+  <div class="shadow"></div>
+</div>
+ <div class="shadow-bototm">
+    <p>分享到</p>
+    <div class="zool">
+      <a href="" class="zool-left"><div class="weibo"></div></a>
+      <a href="" class="zool-right"><div class="zone"></div></a>
+    </div>
+  </div>
+  </div>
+  <div class="dh-detail">
+    <div class="dh-detail-header">
+      <div class="head">
+        <div class="hotel-Carousel">
+          <img src="../img/1001.jpg" alt="">
+        </div>
+        <div class="header-left">
+          <i></i>
+        </div>
+        <div class="header-right">
+          <i ng-click="hide()"></i>
+        </div>
+        <div class="header-info">
+          <div class="header-info-title">
+            <span ng-bind='showdata[0].name'></span>
+          </div>
+          <div class="rank">
+            <span>
+              <img src="../img/2003.png" >
+              <img src="../img/2003.png" alt="">
+              <img src="../img/2003.png" alt="">
+              <img src="../img/2003.png" alt="">
+              <img src="../img/2003.png" alt="">
+            </span>
+          </div>
+          <div class="description">
+            <span>高于99%同类酒店 | </span>
+            <span ng-bind='showdata[0].message'></span>
+          </div>
+        </div>
+        <div class="location">
+          <div class="address">
+            <span>珠江新城珠江西路5号广州国际金融中心主塔楼67-100楼</span>
+          </div>
+          <div class="nearby" ng-bind='showdata[0].map'> 距花城大道地铁站137m </div>
+          <i class="arrowent"></i>
+        </div>
+        <section class="detail">
+          <ul class="detail-list">
+           <li class="item">
+            <img class="detail-img" alt="无线上网" src="../img/2004.png">
+            <div class="detail-desc">无线上网</div>
+          </li>
+          <li class="item">
+           <img class="detail-img" alt="停车场" src="../img/2005.png">
+           <div class="detail-desc">停车场</div>
+         </li>
+         <li class="item">
+           <img class="detail-img" alt="接送服务" src="../img/2006.png">
+           <div class="detail-desc">接送服务</div>
+         </li>
+         <li class="item">
+           <img class="detail-img" alt="行李寄存" src="../img/2007.png">
+           <div class="detail-desc">行李寄存</div>
+         </li>
+       </ul>
+       <div class="detail-nav">
+         <span class="text">详情/周边</span>
+         <img class="arrowent" src="../img/2008.png">
+       </div>
+     </section>
+   </div>
+   <div class="shop-detail-container">
+     <div class="shop-detail-item clear">
+       <a class="prepay--date">
+         <span class="prepay--icon">订</span>
+         <span >今日</span>入住－<span>明日</span>退房&nbsp;住<span >1</span>晚</a>
+         <img class="arrowent" src="../img/2008.png">
+       </div>
+       <div class="filter-operation" >
+        <button class="filter-btn">含早 </button>
+        <button class="filter-btn">大床 </button>
+        <button class="filter-btn">双床 </button>
+      </div>
+      <div class="detail-hotel clear" ng-repeat='(key, value) in showdata'>
+        <a class="hotel-prepay--item" >
+          <div>
+            <img src="../img/1001.jpg" ng-bind="response[i].room_id">
+          </div>
+          <div>
+            <div>
+              <div class="detail-hotel-someing">
+                <div>
+                  <span ng-bind='showdata[0].name'>云尚城景</span><span ng-bind='value.room_type'>大床房（部<br>分有窗）</span>
+                  <br>
+                  <i class="hotel-i">代理</i>
+                </div>
+                <p class="detail-common" ng-bind='value.room_breakfast'>无早 大床 </p>
+                <p class="detail-common">不可取消 1小时内确认</p>
+               </div>
+                <div class="hotel-price">
+                <span ><small >¥</small><span ng-bind='value.room_price'></span></span>
+                </div>
+              </div>
+            </div>
+            <div class="hotel-enter" ng-click="touch()">
+             <button type="button" >预订 </button>
+           </div>
+         </a>
+       </div>
+       <a class="hotel--more">
+        <span class="hotel--more-text">更多25个房型...</span>
+      </a>
+    </div>
+    <div class="hotel-set-screen">
+      <div class="hotel-set-screen-title">
+        <span class="set-icon">套餐</span>
+        <span class="set-title">酒店 + 景点</span>
+      </div>
+      <!-- <div class="item clear">
+        <div class="left">
+          <div class="hotel-description"> <span ng-bind='showdata.name'>广州四季酒店</span>1晚+
+          <span ng-bind='showdata.hotel_tour'>双人自助早餐+双人珠江夜游门票 </span></div>
+          <p class="appraisal"><span ng-bind='showdata.room_satisfy'>87%</span>好评 </p>
+        </div>
+        <div class="right">
+          <div class="price">
+            <div class="real"><small>¥</small>
+            <span ng-bind='showdata.hotel_tour_oldprice'>3280</span></div>
+            <div class="fake">¥6898</div>
+          </div>
+          <div> <i class="arrowent"></i></div>
+        </div>
+      </div> -->
+       <div class="item clear" ng-repeat='(key, value) in showdata'>
+        <div class="left">
+          <div class="hotel-description"><span ng-bind='showdata[0].name'>广州四季酒店</span>1晚+
+          <span ng-bind='value.hotel_tour'>双人自助早餐+双人珠江夜游门票</span> </div>
+          <p class="appraisal"><span ng-bind='value.room_satisfy'>87%</span>好评 </p>
+        </div>
+        <div class="right">
+          <div class="price">
+            <div class="real"><small>¥</small>{{value.hotel_tour_oldprice}}</div>
+            <div class="fake" ng-bind='value.hotel_tour_newprice'>¥7998</div>
+          </div>
+          <div> <i class="arrowent"></i></div>
+        </div>
+      </div>
+    </div>
+  <div class="hotel-list-header">
+      <div class="comment-size"> 网友点评(2937) </div>
+      <div class="score-text"> 房间:9.5 位置:9.5 服务:9.4
+      </div>
+      <div class="abstraction-text">
+      <span>网友说:服务热情(744)度、环境优雅(645)、高大上干净卫生(367)、位置好(154)、价格高(110)、交通便利(100)、性价比高(31)
+        </span>
+      </div>
+  </div>
+  <div class="hotel-reviews">
+    <div class="review clear" ng-repeat="(key,value) in showdata">
+      <div class="user-pic">
+        <img  src="../img/1001.jpg">
+      </div>
+      <div class="hotel-content">
+        <div class="review-header">
+          <div class="name" ng-bind='value.net_name'>武吉智馬蔡</div>
+          <div class="time " ng-bind='value.net_time'>3月13日</div>
+        </div>
+        <div class="rank ">
+          <span class="star">
+            <img src="../img/2003.png" alt="">
+            <img src="../img/2003.png" alt="">
+            <img src="../img/2003.png" alt="">
+            <img src="../img/2003.png" alt="">
+            <img src="../img/2003.png" alt="">
+          </span>
+        </div>
+        <div class="hotel-comment" ng-bind='value.net_say'>四季酒店是一家國際性奢華酒店管理集團，總部位於加拿大多倫多市，1961年由伊薩多·夏普（Isadore Sharp）創辦，在40個國家擁有超過90家酒店，為全球最佳酒店集團之一。比爾·蓋茨和阿爾瓦利德·本·塔拉爾王子也是四季酒店集團的大股東。
+          酒店宗旨:待人如己，客製化服務
+          居於天河區珠江新城的【四季酒店】，是【四季酒店】集團在廣州的分店，酒店所在為103层的國際金融中心，位置之好，應該是用重金聘請資深勘輿學家經過精心測量，好得不得了，珠江新城中心，廣州新中軸綫花城廣場以西及珠江西路以東。
+          五星級酒店當然要有五星級的風範，軟硬兼施，應該有行政套房，商務套房，豪華套房，豪華双人房，標準双人房，等等，中西餐廳，咖啡廳，國際會議中心，游泳，健身，桑拿，購物，等等，還有人員的培養，訓練，以及素質的提昇，技術的提高。
+          位於二樓的國際會議中心，經常舉辦不同的產品展示會，新聞發布會，例如廣東電視臺衛視【炫風車手】新聞發布會，富隆酒業的新世界紅酒展示品鑒會，來自澳洲，南非，加拿大，智利，等新世界紅酒，譲到會的宾客品鑒購賣。
+          還有一點很值得一提的事就是，有一次我途經【四季酒店】近南門路邊保安亭問富力麗斯卡爾頓如何去？本人先用廣府語問，後用普通話問，該名高大的保安馬上用普通話要求我本人:請講中國話。真是莫名其妙？像【四季酒店】这樣國際性連鎖五星級酒店的安保人員，連普通話，廣府語同樣是中國漢語都分不清？看來酒店的員工培訓還需努力。
+        </div>
+    </div>
+     </div>
+    <div class="check-all"> 查看全部网友点评...</div>
+
+  <div class="hotel-review-operation">
+    <a class="operation">
+      <div class="comment-pic"></div>
+      <p>写点评</p>
+    </a>
+    <a class="operation">
+    <div class="photo-pic"></div>
+    <p>传图片</p>
+    </a>
+  </div>
+  </div>
+</div>
+</body>
+</html>

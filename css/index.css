@@ -1,0 +1,553 @@
+html{
+  font-size: 625%;
+}
+h1,h2,h3,h4,p,figure,ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body{
+  margin: 0;
+  font-family: '微软雅黑';
+  color: #666;
+}
+a{
+  text-decoration: none;
+  width: 0;
+  height: 0;
+}
+.clear{
+  zoom:1;
+}
+.clear:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.wrap{
+  max-width:  6.4rem;
+  margin: 0 auto;
+}
+/*header*/
+.mask{display: none; position: fixed; left: 0; top: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.3);  z-index: 99; font-size: 38px;}
+.mask>i{display: block;
+ position: absolute;
+ left: 50%;
+ top: 50%;
+ margin-left: -0.2rem;
+ margin-top: -0.2rem;
+ z-index: 1000;
+ width: 0.4rem;
+ height: 0.4rem;
+}
+.mask>i>img{
+  width: 100%;
+  height: 100%;
+  border-radius: 0.4rem;
+}
+.header{
+  height:0.45rem;
+  width: 100%;
+  line-height: 0.45rem;
+  background: #12f7e3;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+.header .a1 {
+  position: relative;
+  top:-0.35rem;
+  left:0.17rem;
+  color: #fff;
+  max-width: 0.60rem;
+
+
+}
+.header .a1 span{
+  font-size: 0.15rem;
+
+
+}
+.header .a1 i{
+  font-size: 0.25rem;
+  color: #296534;
+  position: relative;
+  top: 0.05rem;
+  margin-left: 0.03rem;
+}
+.header .searchbox{
+  position: absolute;
+  top:-0.35rem;
+  left:1rem;
+}
+.header .searchbox input{
+  outline: none;
+  border: 1px solid #fff;
+  width: 1.5rem;
+  height: 0.25rem;
+  font-size: 0.14rem;
+  padding-left:0.34rem;
+  border-radius: 0.08rem;
+}
+.header .searchbox em{
+  display: block;
+  width: 0.16rem;
+  height: 0.16rem;
+  background: url(../img/search.png);
+  position: absolute;
+  top: 0.51rem;
+  left: 0.1rem;
+}
+.header a img{
+ display: block;
+ position:absolute;
+ right: 0.1rem;
+ top:0.08rem;
+ width: 0.28rem;
+ height: 0.3rem;
+
+}
+
+/*adver*/
+.adver{
+  background: url(../img/twbg2.png);
+  width: 100%;
+  height: 1.2rem;
+  text-align: center;
+  line-height: 0.85rem;
+  color:#699898;
+  margin-top: 0.45rem;
+
+  font-size: 0.15rem;
+}
+.adver i{
+  font-size: 0.28rem;
+  color:#4fd8d8;
+  position:relative;
+  top: 0.05rem;
+}
+
+/*select*/
+.select{
+  width: 100%;
+  min-height:2.3rem;
+  background:#f4fffe;
+  position: relative;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.select ul{
+  margin:0.1rem 0.1rem;
+}
+.select ul li{
+  width: 20%;
+  height:30%;
+  float: left;
+
+}
+.select ul li a{
+  font-size: 0.16rem;
+  display: block;
+  float: left;
+  width: 100%;
+  height:100%;
+  text-align: center;
+}
+.select ul li img{
+  width: 80%;
+  height: auto;
+  display: block;
+
+}
+.select ul li span{
+  display: block;
+  width: 95%;
+  font-size: 0.16rem;
+  text-align: center;
+
+}
+.select .s1{
+  display: none;
+  position: absolute;
+  left: 5rem;
+}
+
+.select .active{
+  display: block;
+
+  left: 0;
+}
+.select .sb {
+  position: absolute;
+  bottom: -0.08rem;
+  left:22%;
+  width: 2rem;
+  height: 0.3rem;
+  margin: 0.1rem auto;
+  text-align:right;
+}
+.select .sb span{
+  display: block;
+  float: left;
+  width: 0.1rem;
+  height: 0.1rem;
+  background: #ccc;
+  margin-left: 0.2rem;
+  border-radius: 0.03rem;
+}
+.select .sb span:first-child{
+  margin-left: 0.7rem;
+}
+.select .sb .active{
+  background:#0ae0cd;
+}
+
+
+
+
+/*intro*/
+.intro{
+  width: 100%;
+  height: auto;
+  font-size: 0.16rem;
+}
+.introF{
+  width: 100%;
+  height: 0.65rem;
+  border: 1px solid #eee;
+}
+.introF .Fl{
+  width: 13%;
+  float: left;
+  border-right: 0.01rem solid #ccc;
+  margin:0.1rem;
+  padding-right:0.05rem;
+}
+.introF .Fl h2{
+  font-size: 0.20rem;
+  color:#7fdcd4;
+}
+.introF .Fr{
+  margin-top: 0.1rem;
+  width: 79%;
+  float: left;
+  position: relative;
+}
+
+.introF .Fr li{
+
+  opacity: 0;
+  background: #fff;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+.introF .Fr .opa{
+  opacity: 1;
+}
+.introF .Fr h3{
+  font-size: 0.13rem;
+  float: left;
+  width: 70%;
+  color:#7d7a7a;
+}
+.introF .Fr img{
+  margin-right:0.1rem;
+  float: right;
+  width: 17%;
+  height: auto;
+  border-radius: 0.1rem;
+}
+.introS {
+  width: 100%;
+  height: auto;
+  background: #eee;
+}
+.introS img{
+  padding:  0.03rem 0;
+  width: 100%;
+  height: auto;
+}
+.introT {
+  width: 100%;
+  height: auto;
+  background: #eee;
+}
+.introT li{
+  width: 43%;
+  height: 0.75rem;
+  text-align: center;
+
+  float: left;
+  padding: 0.1rem;
+  border: 0.01rem solid #eee;
+  margin:0.07rem 0.01rem;
+  background: #f4fffe;
+}
+.introT li div{
+  width: 60%;
+  float: left;
+}
+.introT li div h3{
+  font-size: 0.18rem;
+  color:#699898;
+}
+.introT li div p{
+  font-size: 0.14rem;
+  color:#ccc;
+}
+.introT li img{
+  width: 34%;
+  height: auto;
+  float: right;
+  margin-right: 0.05rem;
+}
+
+/*message*/
+.message{
+  width: 100%;
+  height: auto;
+  background: #eee;
+  font-size: 0.16rem;
+}
+.message .mt{
+  background: #fff;
+  margin-bottom: 0.1rem;
+}
+.message .count{
+  width: 100%;
+  height:0.38rem;
+}
+.message .count h3{
+  float: left;
+  padding: 0.05rem;
+  color:#699898;
+}
+.message .count span{
+  float: right;
+  padding: 0.05rem;
+  color:#ccc;
+}
+.message .mt li{
+  float: left;
+  width: 30%;
+}
+.message .mt li{
+  margin: 0.06rem;
+}
+.message .mt li img{
+  width: 100%;
+  height: auto;
+}
+.message .mt li h4{
+  font-size: 0.16rem;
+  margin: 0.05rem;
+}
+.message .mt li p{
+  margin: 0.05rem;
+  font-size: 0.18rem;
+  color:orange;
+}
+.message .mt li p i{
+  text-decoration: line-through;
+  font-size: 0.12rem;
+  color:#ccc;
+}
+
+.message .mb{
+  width: 100%;
+  height: auto;
+  background: #eee;
+}
+.message .mb h3{
+  font-size: 0.16rem;
+  padding-left:0.1rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  margin-bottom: 0.1rem;
+  height: 0.20rem;
+  background: #fff;
+  line-height: 0.2rem;
+  color:#699898;
+}
+.message .mb .list{
+  margin-left: 0.1rem;
+  width: 96%;
+  background: #fff;
+  margin-bottom: 0.1rem;
+  border: 1px solid #f5f5f5;
+}
+.message .mb .list img{
+  float: left;
+  width: 30%;
+  height: auto;
+}
+.message .mb .list .lmes{
+  float: left;
+  width: 67%;
+  margin-left: 0.06rem;
+}
+.message .mb .list .lmes h4{
+  font-size: 0.18rem;
+  margin-bottom: 0.05rem;
+}
+.message .mb .list .lmes p{
+  font-size: 0.14rem;
+  line-height: 0.16rem;
+  margin-bottom: 0.05rem;
+  position: relative;
+}
+.message .mb .list .lmes p span{
+  color:orange;
+  font-size: 0.2rem;
+}
+.message .mb .list .lmes p
+i{
+  text-decoration: line-through;
+}
+.message .mb .list .lmes p
+em{
+  position: absolute;
+  right: 0;
+  font-size: 0.16rem;
+}
+.message .mb .list .lmes a{
+  background:#cbefeb;
+  text-align: center;
+  color:#3e3434;
+  display: block;
+  width:1rem;
+  height: auto;
+  padding: 0.05rem;
+  border-radius: 0.1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.message  .p{
+  width: 92%;
+  text-align: center;
+  padding: 0.05rem;
+  margin: 0.1rem;
+  font-size: 0.18rem;
+  background: #b9e4e1;
+}
+.footer{
+  background: #e2f7f5;
+  margin-top: 0.1rem;
+  padding-top: 0.1rem;
+  width: 100%;
+  text-align: center;
+  font-size: 0.14rem;
+  color:#3e3434;
+}
+.footer a{
+  font-size: 0.14rem;
+  color:#3e3434;
+  padding-left: 0.02rem;
+}
+.footer div{
+  margin: 0.05rem;
+}
+
+@media screen and (max-height: 600px)and (min-height:480px){
+  .select{
+    height: 2.3rem;
+  }
+  .select ul li{
+    margin-bottom: 0.2rem;
+  }
+  .select ul li span{
+
+    font-size: 0.13rem;
+
+  }
+  .select ul li{
+    margin-bottom: 0.1rem;
+  }
+  .introT li{
+    width: 42%;
+
+  }
+  .message .mt li{
+    padding-left: 0.03rem;
+    width: 28%;
+  }
+  .introF .Fr {
+
+    width: 69%;
+
+  }
+  .select ul li span{
+
+    font-size: 0.13rem;
+
+  }
+  .header .searchbox input {
+
+    width: 1.3rem;
+
+  }
+}
+@media screen and (max-height: 1400px)and (min-height:1200px){
+.select{
+  min-height:4.6rem;
+}
+}
+@media screen and (max-height: 700px)and (min-height:900px){
+  body{
+    font-size:700%;
+  }
+.select{
+  min-height:3.5rem;
+}
+}
+
+@media screen and (max-height: 323px)and (min-height:480px){
+
+  .select{
+  min-height:2.3rem;
+}
+
+}
+@media screen and (max-height: 323px){
+  .select{
+  min-height:1.9rem;
+}
+  .select ul li{
+    margin-bottom: 0.1rem;
+  }
+  .introT li{
+    width: 42%;
+
+  }
+  .message .mt li{
+    padding-left: 0.03rem;
+    width: 28%;
+  }
+  .introF .Fr {
+
+    width: 69%;
+
+  }
+  .select ul li span{
+
+    font-size: 0.13rem;
+
+  }
+  .header .searchbox input {
+
+    width: 1.3rem;
+
+  }
+
+
+}
+
+@media screen and (max-height: 600px) and (min-height: 480px)
+.select {
+    min-height: 2rem;
+}

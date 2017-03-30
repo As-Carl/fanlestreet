@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../css/foot.css"/>
+		<link rel="stylesheet" type="text/css" href="../lib/font-awesome-4.7.0/css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../lib/Swiper-3.4.2/dist/css/swiper.min.css"/>
+		<script src="../lib/jquery/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../zzbclient/rem.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../lib/angular/angular.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../zzbclient/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../zzbclient/footclient.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../lib/Swiper-3.4.2/dist/js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../lib/touch.js/js/touch.min.js" type="text/javascript" charset="utf-8"></script>
+		<title></title>
+	</head>
+	<body>
+		<div class="box" ng-app="footapp" ng-controller="footcontroller">
+			
+			<div class="header clear">
+				<div class="person">
+					<i class="fa fa-chevron-left" aria-hidden="true"></i>
+				</div>
+				<div class="content">
+					<div class="shanghu">
+						<a href="#">商户</a>
+						<a href="#">闪惠团购</a>
+					</div>
+				</div>
+				<div class="search">
+					<i class="fa fa-search" aria-hidden="true"></i>
+				</div>
+			</div>
+			
+			
+			<div class="nav">
+				<div class="nav1">
+					<span>全部商区∨</span>
+				</div>
+				<div class="nav2">
+					<span>全部美食∨</span>
+				</div>
+				<div class="nav3">
+					<span>智能排序∨</span>
+				</div>
+			</div>
+			<div class="banner">
+				<ul>
+					<li class="li" ng-repeat="key in data">
+						<a href="#"><img ng-src="{{key.src}}"/></a>
+						<div class="right clear">
+							<p class="p1">點都德(名都楼)
+								<span class="span1"></span>
+								<span class="span2"></span>
+								<span class="span3"></span> 
+							</p>
+							<p class="p2">
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i class="fa fa-star-half-o" aria-hidden="true"></i>
+								<span class="span4">￥59/人</span> </p>
+							<p class="p3">滨江路  <span>粤菜</span></p>
+							<i class="line"></i>
+							<p class="p4">
+								<span class="span5"></span>
+								<span>90代100元</span>
+								<i class="fa fa-chevron-right" aria-hidden="true" ></i>
+							</p>
+						</div>
+					</li>
+					
+				</ul>
+			</div>
+			
+		</div>
+	</body>
+</html>
+

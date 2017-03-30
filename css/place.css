@@ -1,0 +1,159 @@
+html{
+  font-size: 625%;
+}
+h1,h2,h3,h4,p,figure,ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body{
+  margin: 0;
+  font-family: '微软雅黑';
+  color: #666;
+  background: #eee;
+}
+a{
+  text-decoration: none;
+  width: 0;
+  height: 0;
+}
+.clear{
+  zoom:1;
+}
+.clear:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.wrap{
+  max-width:  6.4rem;
+  margin: 0 auto;
+}
+/*header*/
+.head {
+  width: 100%;
+  height:1rem;
+  line-height: 1rem;
+  background: #fff;
+}
+.head a{
+ font-size: 0.58rem;
+ float: left;
+ width: 20%;
+ height: 100%;
+ color: #43e5ef;
+
+}
+.head .hr{
+ width: 65%;
+ font-size: 0.32rem;
+ float: left;
+ text-align: center;
+ height: 100%;
+ color: #43e5ef;
+}
+.head .hr p{
+  border-radius: 0.1rem;
+// border: 1px solid #43e5ef;
+}
+.head .hr p span{
+  padding:0.05rem;
+  border: 1px solid  #43e5ef;
+  border-radius:0 0.1rem  0.1rem 0;
+}
+.head .hr p .active{
+  background: #43e5ef;
+  color: #fff;
+  border-radius:0.1rem 0  0 0.1rem;
+
+}
+
+.search{
+  background: #fff;
+  margin: 0.1rem 0;
+  width: 100%;
+  text-align: center;
+  height: 0.5rem;
+
+}
+.search .ss{
+  width: 80%;
+  height: 100%;
+  position: relative;
+  top: -0.75rem;
+  left: 0;
+  z-index: -99;
+}
+.search .ss i{
+  position: absolute;
+  top: 0.07rem;
+  left: 1.15rem;
+}
+.search .ss input{
+  outline: none;
+  border: 1px solid #ccc;
+  height: 0.4rem;
+  width: 60%;
+  padding-left: 0.6rem;
+  margin-left: 0.9rem;
+  border-radius: 0.1rem;
+  color:#07494c;
+
+}
+.get{
+  font-size: 0.3rem;
+  width: 100%;
+  height: 1rem;
+  text-align: center;
+  margin: 0.1rem 0;
+  line-height: 1rem;
+  background: #fff;
+  color:#1a797d;
+}
+.twhotcity{
+  width: 100%;
+  height: auto;
+  background: #fff;
+  font-size: 0.20rem;
+}
+ .twcitylist{
+  width: 100%;
+  height: auto;
+  background: #fff;
+}
+  li{
+  float: left;
+  font-size: 0.20rem;
+  width: 24.3%;
+  height: 0.3rem;
+  border: 0.02rem solid #eee;
+  color:#fff;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0.1rem 0;
+
+}
+.hot-trade ul{
+  width: 100%;
+  height: auto;
+  background:#fff;
+}
+.hd{
+  font-size: 0.25rem;
+  margin: 0.1rem 0 ;
+  color: #397679;
+}
+li a{
+font-size: 0.25rem;
+color:#07494c;
+}
+@media screen and (max-width: 480px){
+
+  html{
+    font-size: 480%;
+  }
+
+}

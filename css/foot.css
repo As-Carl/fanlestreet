@@ -1,0 +1,232 @@
+body{font-family:"Microsoft YaHei","\5B8B\4F53","Arial Narrow",HELVETICA;text-align:center;margin:0 auto;padding:0;background:#FFF;font-size:12px;color:#333;} 
+body > div{text-align:center;margin-right:auto;margin-left:auto;} 
+div,form,ul,ol,li,span,p{margin:0;padding:0;border:0;}
+img,a img{border:0;margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6{margin:0;padding:0;font-size:12px;font-weight:normal;}
+ul,ol,li{list-style:none}
+table,td,input{font-size:12px;padding:0} /* 默认链接颜色 */ 
+a{outline-style:none;color:#333;text-decoration:none}
+a:hover{color:#c00;text-decoration:underline;}
+html{
+	font-size: 625%;
+}
+img{
+	display: block;
+	max-width: 100%;
+}
+.clear{
+	zoom:1;
+}
+.clearfix:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.box{
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	height: 5000px;
+}
+.box>.header{
+	display: flex;
+    width: 100%;
+    height: 45px;
+    padding: 0;
+    text-align: center;
+    background: #eee;
+}
+.box>.header>.person{
+	width: 30px;
+}
+.box>.header>.person>i{
+	position: absolute;
+    top: 10px;
+    left: 5px;
+    width: 33px;
+    height: 32px;
+	font-size: 28px;
+}
+.box>.header>.content{
+	    padding-top: 7px;
+		
+		/*display: flex;*/
+		/*display: -webkit-flex;*/
+		/*width: 50%;*/
+		/*transform: translate(1rem);*/
+		-webkit-flex: 1;
+		-webkit-box-flex: 1;
+		width: 80%;
+		
+}
+.box>.header>.content>.shanghu{
+	width: 144px;
+	/*-webkit-box-flex: 1;*/
+	background-color: #ff8400;
+    color: #fff;
+    border-radius: 5px; 
+    /*width: 120px;*/
+    height: 30px;
+    border: 1px solid rgb(255,132,0);
+    /*margin: 0 auto;*/
+   margin: 0 auto;
+   transform: translateX(-10%);
+}
+.box>.header>.content>.shanghu>a{
+	display: inline-block;
+	width: 70px;
+	font-size: 16px;
+	line-height: 30px;
+	color: #fff;
+	text-decoration: none;
+}
+.box>.header>.content>.shanghu>a:last-child{
+	background: #fff;
+	color:rgb(255,132,0) ;
+    border-top-right-radius: 4px; 
+    border-bottom-right-radius: 4px; 
+	
+}
+.box>.header>.search{
+	width: 30px;
+    top: 10px;
+    right: 15px;
+    position: absolute;
+}
+.box>.header>.search>i{
+	font-size: 24px;	
+}
+.box>.nav{
+	display: flex;
+	width: 100%;
+	height: 40px;
+	/*background: #ddd;*/
+	border-bottom: 1px solid #eee;
+}
+.box>.nav>div{
+	display: block;
+    width: 33%;
+    text-align: center;
+    color: #646464;
+    font-size: 13px;
+    
+}
+.box>.nav>div>span{
+	line-height: 40px;
+	
+}
+.box>.banner>ul{
+	width: 100%;
+	overflow: auto;
+}
+.box>.banner>ul>li{
+	width: 100%;
+	height: 130px;
+	list-style: none;
+	/*background: #eee;*/
+	border-bottom: 1px solid #eee;
+	display: flex;
+}
+.box>.banner>ul>li>a{
+	display: inline-block;
+	margin-top: 30px;
+}
+.box>.banner>ul>li>a>img{
+	display: inline-block;
+	width: 88px;
+}
+.box>.banner>ul>li>.right{
+	-webkit-flex: 1;
+	/*background: #eee;*/
+	
+}
+.box>.banner>ul>li>.right>p{
+	/*margin-left: 250px;*/
+}
+.box>.banner>ul>li>.right>.p1{
+	margin-left: -30px;
+	margin-top: 15px;
+	font-size: 16px;
+	overflow: hidden;
+	height:30px;
+}
+.box>.banner>ul>li>.right>.p1>.span1{
+	width: 17px;
+    height: 22px;
+    background: url(../db/img/smalltu.png) no-repeat 0 -70px;
+    background-size: 115px auto;
+    display: inline-block;
+}
+.box>.banner>ul>li>.right>.p1>.span2{
+	width: 17px;
+    height: 22px;
+    background: url(../db/img/smalltu.png) no-repeat -30px -70px;
+    background-size: 115px auto;
+    display: inline-block;
+    
+}
+.box>.banner>ul>li>.right>.p1>.span3{
+	width: 17px;
+    height: 22px;
+    background: url(../db/img/smalltu.png) no-repeat -60px -70px;
+    background-size: 115px auto;
+    display: inline-block;
+}
+.box>.banner>ul>li>.right>.p2{
+	margin-left: -80px;
+	color: rgb(255,132,0);
+}
+.box>.banner>ul>li>.right>.p2>.span4{
+	color: #000;
+}
+.box>.banner>ul>li>.right>.p3{
+	display: inline-block;
+	width: 100%;
+	margin-left:-130px;
+	color: #999;
+	
+}
+.box>.banner>ul>li>.right>.line{
+	display: inline-block;
+	height: 1px;
+	width: 100%;
+	transform: translateX(20px);
+	background: #eee;
+}
+
+.box>.banner>ul>li>.right>.p4{
+	margin: 10px 0  10px -120px;
+	position: relative;
+}
+.box>.banner>ul>li>.right>.p4>.span5{
+	width: 17px;
+    height: 22px;
+    background: url(../db/img/smalltu.png) no-repeat;
+    background-size: 115px auto;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: -5px;
+}
+.box>.banner>ul>li>.right>.p4>span:last-child{
+	display: inline-block;
+}
+.box>.banner>ul>li>.right>.p4>i{
+	position: absolute;
+	top: 3px;
+	right: 20px;
+	display: inline-block;
+}
+
+
+
+
+
+
+@media screen and (min-width:300px ) {
+	.box{
+		min-width: 300px;
+	}
+}

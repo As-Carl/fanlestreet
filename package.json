@@ -1,0 +1,12 @@
+{
+  "name": "fanlejie",
+  "version": "1.0.0",
+  "description": "'phoneapp'",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "tw yw xdh hzm zzb",
+  "license": "ISC"
+}

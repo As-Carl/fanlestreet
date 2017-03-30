@@ -1,0 +1,252 @@
+body{font-family:"Microsoft YaHei","\5B8B\4F53","Arial Narrow",HELVETICA;text-align:center;margin:0 auto;padding:0;background:#FFF;font-size:12px;color:#333;} 
+body > div{text-align:center;margin-right:auto;margin-left:auto;} 
+div,form,ul,ol,li,span,p{margin:0;padding:0;border:0;}
+img,a img{border:0;margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6{margin:0;padding:0;font-size:12px;font-weight:normal;}
+ul,ol,li{list-style:none}
+table,td,input{font-size:12px;padding:0} /* 默认链接颜色 */ 
+a{outline-style:none;color:#333;text-decoration:none}
+a:hover{color:#c00;text-decoration:underline;}
+html{
+	font-size: 625%;
+}
+img{
+	display: block;
+	max-width: 100%;
+}
+.clear{
+	zoom:1;
+}
+.clearfix:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.login-box{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgb(240,240,240);
+	width: 100%;
+}
+
+.login-box>.login-header{
+	width:100% ;
+	display: -webkit-flex;
+	display: flex;
+	background: #fff;
+	height: 45px;
+	position: relative;
+	border-bottom: 1px solid #12f7e3;
+}
+.login-box>.login-header>a{
+	 min-width:20px ;
+	display: inline-block;
+	font-size: 45px;
+	color: #eee;
+	text-decoration: none;
+	margin: 3px 0 0 3px;
+}
+.login-box>.login-header>.title{
+		-webkit-flex: 1;
+		font-size: 18px;
+		/*text-align: center;*/
+		transform: translateX(-0.3rem);
+		line-height: 45px;
+		vertical-align: middle;
+}
+.login-box>.login-form>.form-phone{
+	width: 100%;
+	display: -webkit-flex;
+	display: flex;
+	background: #fff;
+	margin-top: 18px;
+	overflow: hidden;
+	
+}
+.login-box>.login-form>.form-phone>span{
+	min-width: 60px;
+	display: inline-block;
+	line-height: 16px;
+    font-size: 16px;
+    color: #333;
+    margin-top: 16px;
+    height: 18px;
+    width: 60px;
+    border-right: 1px solid #e0e0e0;
+}
+.login-box>.login-form>.form-phone>input{
+	-webkit-flex: 1;
+    box-flex: 1;
+    min-width: 0;
+	display: inline-block;
+    border: none;
+    height: 0.24px;
+  	margin-top: 15px;
+    padding: 10px 0 10px 20px;
+    font-size: 16px;
+    outline: 0;
+    color: #333;
+}
+.login-box>.login-form>.form-phone>a{
+	min-width: 70px;
+	/*width: 90px;*/
+	background: #fff;
+    border: solid 1px #bbb;
+    font-size: 14px;
+    color: #333;
+    padding: 0 10px;
+    margin: 11px 20px 10px 0;
+    line-height: 25px;
+    height: 25px;
+    display: block;
+    text-decoration: none;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    /*justify-content: space-between;*/
+}
+.login-box>.login-form>.form-check{
+	height: 46px;
+	width: 100%;
+	display: -webkit-flex;
+	display: flex;
+	background: #fff;
+	margin-top:1px ;
+	overflow: hidden;
+}
+.login-box>.login-form>.form-check>span{
+	display: inline-block;
+	line-height: 16px;
+    font-size: 16px;
+    color: #333;
+    margin-top: 16px;
+    height: 18px;
+    width: 60px;
+    /*border-right: 1px solid #e0e0e0;*/
+}
+.login-box>.login-form>.form-check>input{
+		width: 40%;
+	display: inline-block;
+    border: none;
+    height: 0.24px;
+    padding: 10px 0 10px 20px;
+    font-size: 16px;
+    outline: 0;
+    color: #333;
+    margin-top:15px ;
+}
+.login-box>.form-info{
+	color: #999;
+    font-size: 12px;
+    line-height: 12px;
+    margin-top: 5px;
+    text-align: center;
+}
+.login-box>.form-button{
+	margin-top: 12px;
+    text-align: center;
+    padding: 0 15px;
+    /*width: 95%;*/
+}
+.login-box>.form-button>a:first-child{
+	line-height: 40px;
+    color: #fff;
+    text-decoration: none;
+    background: #12f7e3;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 14px;
+    letter-spacing: 6px;
+    display: block;
+}
+.login-box>.form-button>a:last-child{
+	margin-top: 16px;
+	display: block;
+	width: 100%;
+	text-align: right;
+	color: #466889;
+    text-decoration: none;
+    font-size: 14px;
+}
+.login-box>.seperator{
+	margin-top: 100px;
+	display: -webkit-flex;
+    -webkit-flex-pack: justify;
+    -webkit-flex-align: center;
+    padding: 0 15px;
+}
+.login-box>.seperator>.line{
+	background: #d7d7d7;
+    height: 1px;
+    -webkit-flex: 1;
+}
+.login-box>.seperator>.text{
+	    color: #999;
+    font-size: 15px;
+    margin-top: -10px;
+}
+.login-box>.icons{
+	    width: 148px;
+    margin: 20px auto 0;
+    display: -webkit-box;
+    -webkit-box-pack: justify;
+    -webkit-box-align: center;
+}
+.login-box>.icons>.icon-qq{
+	    background:url(../db/img/oauth.png);
+    width: 35px;
+    height: 35px;
+    font-size: 35px;
+    background-size: 35px 105px;
+    background-position: 0 0;
+    display: block;
+    -webkit-border-radius: 4.5px;
+    border-radius: 4.5px;
+}
+.login-box>.icons>.icon-weibo{
+	    background:url(../db/img/oauth.png);
+    width: 35px;
+    height: 35px;
+    font-size: 35px;
+    background-size: 35px 105px;
+    background-position: 0 -35px;
+    display: block;
+    -webkit-border-radius: 4.5px;
+    border-radius: 4.5px;
+}
+.login-box>.agreement{
+	    position: fixed;
+    top: 100%;
+    height: 42px;
+    margin-top: -42px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    line-height: 12px;
+    color: #999;
+}
+.login-box>.agreement>a{
+	outline-style: none;
+    color: #333;
+    text-decoration: none;
+}
+#shade{
+	z-index: 99;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: -webkit-flex;
+	display: flex;
+	background: rgb(96,96,96);
+}
+
+@media screen and (max-width:200px ) {
+	.login-box{
+		min-width: 200px;
+	}
+}

@@ -1,0 +1,132 @@
+﻿@charset "utf-8";
+body,h1,h2,h3,p,ul,input,button,figure{
+	margin: 0;
+	padding: 0;
+}
+div,figure,img,input{
+	box-sizing: border-box;
+}
+input{
+	border: 0;
+	outline: none;
+}
+body{
+	font-family: "微软雅黑";
+	color: #666;
+}
+img {
+	display: block;
+	max-width: 100%;
+}
+ul{
+	list-style: outside none none;
+}
+a {
+	text-decoration: none;
+}
+
+html{
+	font-size:625%;	
+}
+
+/*header*/
+// .header{
+// 	width:100%;
+// 	background-color:#333;
+// 	height:.45rem;
+// 	line-height:.45rem;
+// 	text-align:center;
+// 	position:fixed;
+// 	top:0;
+// 	left:0;
+//         z-index:999;
+// }
+
+// .header a{
+// 	float:left;
+// 	width:25%;
+// 	color:#fff;
+// 	font-size:0.16rem;
+// }
+
+// .header a:hover{
+// 	background-color:#000;
+// }
+
+// /*main*/
+// .main{
+//     max-width:6.4rem;
+//     margin:0 auto;
+//     margin-top:.45rem;
+
+// }
+// .main img{
+//      max-width:100%;
+//      display:block;
+// }
+
+// .main hgroup h2{
+// 	font-size:0.26rem;
+// 	text-align:center;
+// }
+// .main hgroup h3{
+// 	font-size:.16rem;
+// 	text-align:center;
+// 	margin:0.05rem 0 0.05rem 0;
+// 	font-weight:normal;
+// }
+// .main .content{
+// 	background-color:#eee;
+// 	 overflow:hidden;	
+
+// }
+// .main figure{
+// 	 float:left;
+// 	 width:50%;
+// 	 padding:0.02rem;	
+// 	 font-size:.17rem; 
+
+// }
+// .main figure figcaption{
+// 	overflow:hidden;
+// }
+// .main figure img{
+//      border-radius:0.05rem;
+// }
+// .main figure p{
+// 	line-height:.20rem;
+// }
+// .main figure p:nth-child(2){
+// 	margin-bottom:.1rem;
+// }
+// .main figure .sat span:nth-child(1){
+//  float:left;
+//  color:#f60;
+// }
+// .main figure .sat span:nth-child(2){
+//  float:right;
+// }
+// /*footer*/
+//  .footer{
+//  	max-width:6.4rem;
+// 	padding:.1rem 0 0 .1rem;
+// 	background-color: #222;
+// 	text-align:center;
+// 	margin:0 auto;
+// }
+// .footer p{
+// 	font-size:.17rem;
+// 	color:#777;
+// }
+@media screen and (min-width:480px) and (max-width:520px) {
+	html{
+		font-size:480%;
+		
+	}
+}
+@media screen and (max-width:480px) {
+	html{
+		font-size:330%;
+		
+	}
+}

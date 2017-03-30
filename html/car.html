@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="../css/car.css">
+  <link rel="stylesheet" type="text/css" href="../css/font-awesome/css/font-awesome.min.css">
+  <script src="../libs/angular/angular.min.js"></script>
+  <script src="../libs/jquery/jquery-2.1.1.min.js"></script>
+  <script src="../libs/angular/lazyload.js"></script>
+  <script src="../client_js/global.js"></script>
+  <script src="../client_js/car.js"></script>
+  <script src="../client_js/getUrl.js"></script>
+</head>
+<body>
+<div class="mz_car" ng-app="myApp" ng-controller="myController">
+  <div class="mz_head">
+    <div class="toIndex"><span></span><a href="#" ng-click='back()'>首页</a></div>
+    <div class="tab">
+      <div class="active">订单</div>
+      <div>抵用券</div>
+    </div>
+    <div class="mz_cancle">注销</div>
+  </div>
+  <div class="mz_nav">
+    <ul>
+        <li>全部订单</li>
+        <li>代付款</li>
+        <li>可使用</li>
+        <li>退款/售后</li>
+    </ul>
+  </div>
+  <div class="mz_content">
+    <ul>
+        <li class="empty"></li>
+        <li ng-repeat="(key,value) in CarData" class="list">
+          <ul>
+              <li class="title"><h3>{{value.name}}</h3><span></span></li>
+              <li class="detail"'>
+                <div class="img"><img data-ui-lazyload="{{value.room_img}}"></div>
+                <div class="name">
+                  <h3 class="title name">{{value.room_type}}</h3>
+                  <p class="name">{{value.room_breakfast}}</p>
+                </div>
+                <div>
+                  <p class="date">{{value.time}}</p>
+                  <div><p class="pay">消费<span>${{value.room_price}}</span></p>
+                      <p class="realPay">实付<span>${{value.room_price}}</span></p>
+                  </div>
+                </div>
+              </li>
+          </ul>
+        </li>
+        <li class="footer"><span class="toBuy">买单</span><span class="more" ng-click='more()'>更多</span></li>
+    </ul>
+  </div>
+  <div class="more_mume" >
+    <div class="del" ng-click="del()">删除所有订单</div>
+    <div class="cancel"  ng-click='cancel()'>取消</div>
+  </div>
+</div>
+</body>
+</html>

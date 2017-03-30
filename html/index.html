@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+  <script src="../libs/jquery/jquery-2.1.1.min.js"></script>
+  <script src="../libs/angular/angular.min.js"></script>
+  <script src="../client_js/index.js"></script>
+  <script src="../client_js/twtouch.js"></script>
+  <script src="../libs/angular/lazyload.js"></script>
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="../css/index.css">
+</head>
+<body ng-app = "twApp" ng-controller = "twController">
+ <div class="mask"><i ><img src="../img/twd2.gif" alt=""></i></div>
+  <div class="header ">
+   <div class="wrap clear">
+    <a href="http://localhost:555/html/place.html" class="a1"><span>广州</span><i>☟</i></a>
+    <div class="searchbox"><em></em><input type="text" placeholder="输入商户名和地点" id="search"></div>
+    <a href="http://localhost:555/html/login.html"><img src="../img/client.png" alt=""></a>
+  </div>
+</div>
+
+<div class="adver">
+  <div class="wrap">
+   <div class="adT">
+     <h2>欢迎使用<i>凡乐街</i></h2>
+   </div>
+ </div>
+</div>
+
+<div class="select clear">
+  <div class="wrap ">
+    <div class="s1 active">
+      <ul class="clear">
+        <li>
+          <a href=""><img src="../img/tws1.png" alt=""><span>美食</span></a>
+
+        </li>
+        <li>
+          <a href=""><img src="../img/tws2.png" alt=""><span>猫眼电影</span></a>
+
+        </li>
+        <li>
+          <a href=""><img src="../img/tws3.png" alt="">
+           <span>酒店</span></a>
+         </li>
+         <li>
+          <a href=""><img src="../img/tws4.png" alt=""><span>休闲娱乐</span></a>
+        </li>
+        <li>
+          <a href=""><img src="../img/tws5.png" alt=""><span>外卖</span></a>
+        </li>
+        <li>
+          <a href=""><img src="../img/tws6.png" alt=""><span>火锅</span></a>
+
+        </li>
+        <li>
+          <a href=""><img src="../img/tws7.png" alt=""><span>丽人</span></a>
+
+        </li>
+        <li>
+          <a href=""><img src="../img/tws8.png" alt="">
+           <span>周边游</span></a>
+         </li>
+         <li>
+          <a href=""><img src="../img/tws9.png" alt=""><span>ktv</span></a>
+        </li>
+        <li>
+          <a href=""><img src="../img/tws10.png" alt=""><span>婚纱摄影</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="s1">
+      <ul class="clear">
+        <li>
+          <a href=""><img src="../img/tws12.png" alt=""><span>景点</span></a>
+
+        </li>
+        <li>
+          <a href=""><img src="../img/tws13.png" alt=""><span>爱车</span></a>
+
+        </li>
+        <li>
+          <a href=""><img src="../img/tws14.png" alt="">
+           <span>运动健身</span></a>
+         </li>
+         <li>
+          <a href=""><img src="../img/tws15.png" alt=""><span>购物</span></a>
+        </li>
+        <li>
+          <a href=""><img src="../img/tws16.png" alt=""><span>亲子</span></a>
+        </li>
+        <li>
+          <a href=""><img src="../img/tws17.png" alt=""><span>家装</span></a>
+
+        </li>
+        <li>
+          <a href=""><img src="../img/tws19.png" alt=""><span>学习培训</span></a>
+
+        </li>
+        <li>
+          <a href=""><img src="../img/tws18.png" alt="">
+           <span>医疗健康</span></a>
+         </li>
+         <li>
+          <a href=""><img src="../img/tws20.png" alt=""><span>日本料理</span></a>
+
+        </li>
+        <li>
+          <a href=""><img src="../img/tws21.png" alt=""><span>美发</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="s1">
+      <ul class="clear">
+
+        <li>
+          <a href=""><img src="../img/tws22.png" alt="">
+           <span>美甲</span></a>
+         </li>
+         <li>
+          <a href=""><img src="../img/tws23.png" alt=""><span>美容</span></a>
+        </li>
+        <li>
+          <a href=""><img src="../img/tws24.png" alt=""><span>瘦身纤体</span></a>
+        </li>
+        <li>
+          <a href=""><img src="../img/tws25.png" alt=""><span>亲子摄影</span></a>
+
+        </li>
+        <li>
+          <a href=""><img src="../img/tws26.png" alt=""><span>亲子游乐</span></a>
+
+        </li>
+        <li>
+          <a href=""><img src="../img/tws27.png" alt="">
+           <span>幼儿教育</span></a>
+         </li>
+         <li>
+          <a href=""><img src="../img/tws29.png" alt=""><span>全部分类</span></a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+  <div class="sb">
+    <span class="active"></span><span></span><span></span>
+  </div>
+</div>
+
+<div class="intro">
+  <div class="wrap">
+    <div class="introF clear">
+      <div class="Fl"  >
+        <h2>热点头条</h2>
+      </div>
+      <div class="Fr" id ="Fr">
+        <ul  id = 'list'>
+          <li class="opa">
+            <a href="#"><div><h3>
+               晓港站居然隐藏了这么多美食，人均10元带你吃遍一条街！
+            </h3><img src="../img/twlun2.jpg" alt=""></div>
+          </a>
+        </li>
+        <li>
+            <a href="#"><div><h3>
+                    广州20家人均不超过30元的餐厅，好吃到爆！你吃过几家？
+            </h3><img src="../img/twlun1.jpg" alt=""></div>
+          </a>
+        </li>
+        <li>
+            <a href="#"><div><h3>
+              天河白领午饭必备指南：5大商圈15间餐馆，人均20左右管饱，抵！
+            </h3><img src="../img/tw3.jpg" alt=""></div>
+          </a>
+        </li>
+        <li>
+            <a href="#"><div><h3>
+              这可能是广州最好吃的潮汕干面了，不然为什么人们绕远路都要去！
+            </h3><img src="../img/tw5.jpg" alt=""></div>
+          </a>
+        </li>
+        <li>
+            <a href="#"><div><h3>
+              中国吃货到底有多牛？拯救了美国一个产业
+            </h3><img src="../img/tw4.jpg" alt=""></div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="introS">
+   <img src="../img/twbg1.png" alt="">
+ </div>
+ <div class="introT">
+  <ul class="clear">
+    <li>
+      <a href="#">
+        <div>
+          <h3>外卖招牌菜</h3>
+          <p>强力推荐</p>
+        </div>
+        <img src="../img/twi4.png" alt="">
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <div>
+          <h3>全城特惠</h3>
+          <p>大品牌任你挑</p>
+        </div>
+        <img src="../img/twi2.png" alt="">
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <div>
+          <h3>颜 = 》钱</h3>
+          <p>优惠红包任你抢</p>
+        </div>
+        <img src="../img/twi3.png" alt="">
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <div>
+          <h3>盛世狂欢</h3>
+          <p>电影免费看</p>
+        </div>
+        <img src="../img/twi1.png" alt="">
+      </a>
+    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="message" >
+  <div class="wrap">
+    <div class="mt">
+      <div class="count clear">
+        <h3>超值特惠</h3>
+        <span>更多优惠&nbsp;&nbsp;＞</span>
+      </div>
+      <ul class="clear">
+        <li ng-repeat = "row in datas" ng-if = "row.phone<=3 && row.phone>=1">
+          <img ng-src="{{row.src}}" alt="">
+          <h4 ng-bind = "row.name">尚大咖啡烘培</h4>
+          <P><span ng-bind = "row.price">￥1</span> <i ng-bind = "row.discount">￥15</i>
+          </P>
+        </li>
+      </ul>
+    </div>
+    <div class="mt">
+      <div class="count">
+        <h3>天天立减</h3>
+        <span>更多优惠&nbsp;&nbsp;＞</span>
+      </div>
+      <ul class="clear">
+       <li ng-repeat = "row in datas" ng-if = "row.phone>3 && row.phone<=6">
+        <img ng-src="{{row.src}}" alt="">
+        <h4 ng-bind = "row.name">尚大咖啡烘培</h4>
+        <P><span ng-bind = "row.price">￥1</span> <i ng-bind = "row.discount">￥15</i>
+        </P>
+      </li>
+    </ul>
+
+  </div>
+  <div class="mb">
+    <h3>猜你喜欢</h3>
+    <div class="list clear" ng-repeat = "row in datas" ng-if = "row.phone >6" >
+      <img data-ui-lazyload="{{row.src}}" alt="">
+      <div class="lmes">
+        <h4 ng-bind = "row.name">悦榕庄</h4>
+        <p ng-bind = "row.message">[三店通用]8人超值套餐，提供免费wifi</p>
+        <p><span ng-bind = "row.price">￥448</span><i ng-bind="row.discount">￥613</i><em ng-bind = "row.star">已售15811</em></p>
+        <a href="#" ng-bind = "row.map">广州食蛇基地</a>
+      </div>
+    </div>
+<p class="p">查看更多</p>
+  </div>
+
+</div>
+</div>
+<div class="footer">
+  <div class="wrap">
+    <div class="fl"><a href="#">我的</a>&nbsp;&nbsp;|<a href="#">社区论坛</a>&nbsp;&nbsp;|<a href="#">添加商户</a>&nbsp;&nbsp;|<a href="#">意见反馈</a></div>
+    <div class="fm"><a href="#">美团</a>&nbsp;&nbsp;|<a href="#">大众点评</a>&nbsp;&nbsp;|<a href="#">家装</a>&nbsp;&nbsp;|<a href="#">宴会</a><a href="#">结婚</a>&nbsp;&nbsp;|<a href="#">亲子</a>&nbsp;&nbsp;|<a href="#">教育</a></div>
+    <div class="fb"><p>copyright ©20170318 fanlestreet.com</p></div>
+  </div>
+</div>
+</body>
+<script >
+
+</script>
+</html>

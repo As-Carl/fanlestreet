@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" name="viewport" />
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/phone.css">
+	<link rel="stylesheet" href="../libs/font-Awesome/css/font-awesome.min.css">
+	<script src="../libs/angular/angular.min.js"></script>
+	<script src="../libs/jquery/jquery-2.1.1.min.js"></script>
+	<script src="../client_js/list.js"></script>
+	<script src="../client_js/twtouch.js"></script>
+	<script type="text/javascript" src="../libs/angular/lazyload.js"></script>
+  <link rel="stylesheet" href="../css/project.css">
+
+</head>
+<body ng-app="ywApp" ng-controller="ywController">
+	<div id="all">
+		<div id="header">
+			<a href="10.3.135.8:555/index.html"><i class="icon-chevron-left"></i></a>
+			<div id="h_center">
+				<a href="">商户</a>
+				<a href="">团购</a>
+			</div>
+		</div>
+		<div id="filter">
+			<ul id="range">
+				<li><span>位置区域</span><img src="../img/2009.png" alt=""></li>
+				<li><span>星级/价格</span><img src="../img/2009.png" alt=""></li>
+				<li><span>智能排序</span><img src="../img/2009.png" alt=""></li>
+			</ul>
+		</div>
+		<div id="body" class="clear">
+			<ul>
+				<li ng-repeat="row in datas">
+					<a class="click" ng-click="click()">
+					    <div class="box"></div>
+						<div id="picture">
+							<img class="lazy" data-ui-lazyload="{{row.src}}" alt="">
+						</div>
+						<div id="content">
+							<div id="top">
+								<span id="name" class="first" ng-bind="row.name"></span>
+							</div>
+							<div id="center">
+								<span>
+									<img src="../img/2003.png" alt="">
+									<img src="../img/2003.png" alt="">
+									<img src="../img/2003.png" alt="">
+									<img src="../img/2003.png" alt="">
+									<img src="../img/2003.png" alt="">
+								</span>
+								<span ng-bind="row.discount">超级赞</span>
+								<span class="num" ng-bind="row.star">2953条</span>
+								<span class="xinghao" ng-bind="row.message">豪华型</span>
+							</div>
+							<div id="bottom">
+								<span ng-bind="row.map">距市中心5.6km  高德置地/花城汇</span>
+							</div>
+							<div id="foot">
+								<span><strong ng-bind="row.price">2332</strong></span>
+								<span></span>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div id="footer"></div>
+	</div>
+	<div id="shadow">
+		<i class="fa fa-spinner fa-spin fa-3x fa-fw" id="fa"></i>
+	</div>
+
+</body>
+</html>

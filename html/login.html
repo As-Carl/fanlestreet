@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../css/login.css" />
+		<link rel="stylesheet" type="text/css" href="../libs/font-awesome/css/font-awesome.min.css" />
+		<script src="../libs/jquery/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/angular/angular.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../client_js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../client_js/loginclient.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../client_js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<title></title>
+	</head>
+
+	<body>
+		<div id="shade" ng-app="myapp" ng-controller="mycontroller">
+			<div class="login-box">
+				<header class="login-header">
+					<a href="#" class="fa fa-arrow-circle-o-left"></a>
+					<div class="title">手机号快捷登录</div>
+				</header>
+				<div class="login-form clear">
+					<div class="form-phone">
+						<span>+86</span>
+						<input type="text" id="log-user" ng-model="user" placeholder="请输入手机号" />
+						<a href="#">发送验证码</a>
+					</div>
+					<div class="form-check">
+						<span>验证码</span>
+						<input type="text" id="log-code" ng-model="code" placeholder="请输入验证码" />
+					</div>
+				</div>
+				<div class="form-info">未注册的手机号码验证后自动创建点评账户</div>
+				<div class="form-button">
+					<a href="" ng-click="log()">登录</a>
+					<a href="#">帐号密码登录</a>
+				</div>
+				<div class="seperator">
+					<div class="line"></div>
+					<div class="text">　第三方账号登录　</div>
+					<div class="line"></div>
+				</div>
+				<div class="icons">
+					<a class="icon-qq" href="#"></a>
+					<a class="icon-weibo" href="#"></a>
+				</div>
+				<div class="agreement">
+					登录即表示你同意大众点评
+					<a href="//www.dianping.com/aboutus/useragreement">《用户使用协议》</a>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
