@@ -31,10 +31,18 @@ detailapp.controller('detailCtrll',['$scope','$http',function($scope,$http){
    $('.shadow-bototm').hide()
  }
 }
+//分享
 $scope.show=function(){
  $('.shadow').show();
  $('.shadow-bototm').show();
 }
+//上一页
+$scope.golink=function(){
+ setTimeout(function(){
+  location.href="http://localhost:555/html/list.html"
+},400)
+}
+
 var _data={};
 $scope.touch=function(){
   var url=new Search({
