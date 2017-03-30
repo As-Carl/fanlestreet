@@ -14,12 +14,15 @@ var ywController = ywApp.controller('ywController',['$scope', '$http',function($
 			$http({
 				method:"get",
 				url:'http://localhost:555/list'
-			}
-			).success(function(data){
+			}).success(function(data){
 				console.log(data)
 				$scope.datas=data;
 				shadow = $('#shadow').css('display','none')
 			})
+		},
+		toLeft:function(){
+			$('#server').css('left','0')
+			document.getElementsByTagName('body')[0].scrollTop = 0;
 		}
 	});
    $scope.click=function(){
@@ -38,6 +41,14 @@ var ywController = ywApp.controller('ywController',['$scope', '$http',function($
       }
    	 },500)
    }
+   $scope.search=function(){
+   	  console.log($('#server'))
+      $('#server').css('left','0')
+   }
+   $scope.back=function(){
+   	 $('#server').css('left','100%');
+   }
+
 
 }]).directive('box', function () {
   return {
