@@ -3,11 +3,11 @@ var twController = twApp.controller('twController',['$scope', '$http',function($
 
   document.getElementsByClassName('mask')[0].style.display = 'block';
      $http.get('http://localhost:555/index').success(function(data){
-        console.log(data)
+        // console.log(data)
         $scope.datas=data;
         document.getElementsByClassName('mask')[0].style.display = 'none';
         $scope.twhref = location.search;
-        console.log($scope.twhref)
+        // console.log($scope.twhref)
         if(!$scope.twhref){
          $scope.twhref = '';
         }
