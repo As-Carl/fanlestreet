@@ -27,9 +27,7 @@ Search.prototype.init=function(){
       }
     }
   }
-  // else{
-  //   location.href=this.obj.linkUrl;//一个地址
-  // }
+
  return  this.show(result)
 }
   Search.prototype.show=function(result){
