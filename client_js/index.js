@@ -10,12 +10,20 @@ var twController = twApp.controller('twController',['$scope', '$http',function($
         // console.log($scope.twhref)
         if(!$scope.twhref){
          $scope.twhref = '';
+         $('.link').click(function(){
+            location.href =  "http://localhost:555/html/login.html"
+           })
+        }else{
+           $('.link').eq(0).click(function(){
+            location.href =  "http://localhost:555/html/car.html"+$scope.twhref ;
+           })
         }
         $('.s1').on('touchstart','li',function(){
           console.log(111);
           location.href =  "http://localhost:555/html/list.html"+$scope.twhref ;
         })
      })
+
 
 
   // 手势
