@@ -17,7 +17,6 @@
 	</head>
 	<body>
 		<div class="box" ng-app="footapp" ng-controller="footcontroller">
-			
 			<div class="header clear">
 				<div class="person">
 					<i class="fa fa-chevron-left" aria-hidden="true"></i>
@@ -50,7 +49,8 @@
 					<li class="li" ng-repeat="key in data">
 						<a href="#"><img ng-src="{{key.src}}"/></a>
 						<div class="right clear">
-							<p class="p1">點都德(名都楼)
+							<p class="p1">
+								<i>{{key.name}}</i>
 								<span class="span1"></span>
 								<span class="span2"></span>
 								<span class="span3"></span> 
@@ -61,12 +61,12 @@
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<i class="fa fa-star-half-o" aria-hidden="true"></i>
-								<span class="span4">￥59/人</span> </p>
-							<p class="p3">滨江路  <span>粤菜</span></p>
+								<span class="span4">{{key.price}}</span> </p>
+							<p class="p3">滨江路  <span>{{key.map}}</span></p>
 							<i class="line"></i>
 							<p class="p4">
 								<span class="span5"></span>
-								<span>90代100元</span>
+								<span>{{key.price}}代{{key.discount}}元</span>
 								<i class="fa fa-chevron-right" aria-hidden="true" ></i>
 							</p>
 						</div>

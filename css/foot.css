@@ -23,12 +23,13 @@ img{
 	clear: both;
 }
 .box{
-	position: fixed;
+	/*position: fixed;
 	top: 0;
 	left: 0;
 	bottom: 0;
-	right: 0;
-	height: 5000px;
+	right: 0;*/
+	/*height: 5000px;*/
+	height: auto;
 }
 .box>.header{
 	display: flex;
@@ -119,7 +120,7 @@ img{
 }
 .box>.banner>ul{
 	width: 100%;
-	overflow: auto;
+	/*overflow: auto;*/
 }
 .box>.banner>ul>li{
 	width: 100%;
@@ -128,6 +129,7 @@ img{
 	/*background: #eee;*/
 	border-bottom: 1px solid #eee;
 	display: flex;
+	
 }
 .box>.banner>ul>li>a{
 	display: inline-block;
@@ -151,6 +153,14 @@ img{
 	font-size: 16px;
 	overflow: hidden;
 	height:30px;
+
+}
+.box>.banner>ul>li>.right>.p1>i{
+	display: inline-block;
+	width: 110px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .box>.banner>ul>li>.right>.p1>.span1{
 	width: 17px;
@@ -184,9 +194,17 @@ img{
 .box>.banner>ul>li>.right>.p3{
 	display: inline-block;
 	width: 100%;
-	margin-left:-130px;
+	margin-left:0px;
 	color: #999;
 	
+}
+.box>.banner>ul>li>.right>.p3>span{
+	line-height: 11px;
+	display: inline-block;
+	width: 150px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .box>.banner>ul>li>.right>.line{
 	display: inline-block;
