@@ -75,20 +75,21 @@ a{
   width: 100%;
   text-align: center;
   height: 0.5rem;
+  position: relative;
 
 }
 .search .ss{
   width: 80%;
   height: 100%;
-  position: relative;
+  position: absolute;
   top: -0.75rem;
-  left: 0;
-  z-index: -99;
+  left: 0.4rem;
+
 }
 .search .ss i{
   position: absolute;
   top: 0.07rem;
-  left: 1.15rem;
+  left: 0.7rem;
 }
 .search .ss input{
   outline: none;
@@ -96,7 +97,6 @@ a{
   height: 0.4rem;
   width: 60%;
   padding-left: 0.6rem;
-  margin-left: 0.9rem;
   border-radius: 0.1rem;
   color:#07494c;
 
