@@ -4,7 +4,7 @@ var mysql = require('mysql');
 var defaults = {
 	"host": "localhost",
 	"user": "root",
-	"password": "",
+	"password": "root",
 	"database": "fanlestree",
 	"table": "goods",
 	"select": "*",
@@ -15,7 +15,7 @@ module.exports = {
 		var defaults = {
 			"host": "localhost",
 			"user": "root",
-			"password": "",
+			"password": "root",
 			"database": "fanlestree",
 			"table": "goods",
 			"selected": "*", //按需查询 id/name/...
@@ -36,7 +36,7 @@ module.exports = {
 		var sqlconnect = mysql.createConnection({
 			host: obj.host || 'localhost',
 			user: obj.user || 'root',
-			password: obj.password || '',
+			password: obj.password ||'root',
 			database: obj.database || 'fanlestreet'
 		});
 		sqlconnect.connect();
@@ -65,7 +65,7 @@ module.exports = {
 		var defaults = {
 			"host": "localhost",
 			"user": "root",
-			"password": "",
+			"password": "root",
 			"database": "fanlestreet",
 			"table": "login",
 		}
