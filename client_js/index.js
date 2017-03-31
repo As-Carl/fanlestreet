@@ -2,7 +2,7 @@ var twApp = angular.module('twApp',['lazyload']);
 var twController = twApp.controller('twController',['$scope', '$http',function($scope,$http){
 
   document.getElementsByClassName('mask')[0].style.display = 'block';
-     $http.get('http://localhost:555/index').success(function(data){
+     $http.get('http://l0.7.135.25:555/index').success(function(data){
         // console.log(data)
         $scope.datas=data;
         document.getElementsByClassName('mask')[0].style.display = 'none';
@@ -11,21 +11,21 @@ var twController = twApp.controller('twController',['$scope', '$http',function($
         if(!$scope.twhref){
          $scope.twhref = '';
          $('.link').click(function(){
-            location.href =  "http://localhost:555/html/login.html"
+            location.href =  "http://l0.7.135.25:555/html/login.html"
            })
         }else{
            $('.link').eq(0).click(function(){
-            location.href =  "http://localhost:555/html/car.html"+$scope.twhref ;
+            location.href =  "http://l0.7.135.25:555/html/car.html"+$scope.twhref ;
            })
         }
         $('.s1').on('touchstart','li',function(){
           console.log(111);
-          location.href =  "http://localhost:555/html/list.html"+$scope.twhref ;
+          location.href =  "http://l0.7.135.25:555/html/list.html"+$scope.twhref ;
         })
 
      $('.mb').on('touchstart','.list',function(){
           console.log(111);
-          location.href =  "http://localhost:555/html/list.html"+$scope.twhref ;
+          location.href =  "http://l0.7.135.25:555/html/list.html"+$scope.twhref ;
         })
 
    })
