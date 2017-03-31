@@ -22,9 +22,13 @@ var twController = twApp.controller('twController',['$scope', '$http',function($
           console.log(111);
           location.href =  "http://localhost:555/html/list.html"+$scope.twhref ;
         })
-     })
 
+     $('.mb').on('touchstart','.list',function(){
+          console.log(111);
+          location.href =  "http://localhost:555/html/list.html"+$scope.twhref ;
+        })
 
+   })
 
   // 手势
   var i=0;
