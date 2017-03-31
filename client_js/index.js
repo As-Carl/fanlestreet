@@ -7,10 +7,11 @@ var twController = twApp.controller('twController',['$scope', '$http',function($
         // console.log(data)
         $scope.datas=data;
         document.getElementsByClassName('mask')[0].style.display = 'none';
+
+
+
         $scope.twhref = location.search;
         console.log($scope.twhref)
-
-
         var place=new Search({needID:['place']})
 
         console.log(place)
