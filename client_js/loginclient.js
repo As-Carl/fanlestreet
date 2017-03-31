@@ -1,8 +1,11 @@
 var app = angular.module("myapp", ['commonApp']);
 app.controller("mycontroller", ["$scope", "$http", function($scope, $http) {
-	console.log($scope.user, $scope.code);
+//	console.log($scope.user, $scope.code);
+	
 	$scope.log = function() {
-
+		if ($scope.user == undefined || $scope.code == undefined) {
+			return alert("亲,请登录");
+		}
 		var _data = {
 			user: $scope.user,
 			code: $scope.code
