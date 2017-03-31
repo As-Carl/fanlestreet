@@ -9,14 +9,13 @@ myApp.directive('empty', function () {
 })
 myApp.controller('myController', ['$scope', '$http','baseUrl',function($scope,$http,baseUrl){
     var url=new Search({
-     linkUrl:'http://localhost:5555/login.html',
+     // linkUrl:'http://localhost:555/login.html',
      needID:["userid"]
     })
     // var data = url.init()[0]
     var _data = {
           userid:url.init()[0]
       };
-    // console.log(data)
     $http({
       url:baseUrl + 'car',
       method:'post',
@@ -35,17 +34,17 @@ myApp.controller('myController', ['$scope', '$http','baseUrl',function($scope,$h
       $('.more_mume').css({'display':'block'})
     }
     //del
-    $scope.del=function(){
-      $http({
-        url:baseUrl + 'delAll_car',
-        method:'post',
-        data:data = _data
-      }).success(function(response){
-          if(response=='1'){
-            location.reload()
-          }
-      })
-    }
+    // $scope.del=function(){
+    //   $http({
+    //     url:baseUrl + 'delAll_car',
+    //     method:'post',
+    //     data:data = _data
+    //   }).success(function(response){
+    //       if(response=='1'){
+    //         location.reload()
+    //       }
+    //   })
+    // }
     //back
     $scope.back = function(){
       location.href = 'http://localhost:555/html/index.html'
@@ -53,6 +52,47 @@ myApp.controller('myController', ['$scope', '$http','baseUrl',function($scope,$h
     //cancel
     $scope.cancel = function(){
       $('.more_mume').css({'display':'none'})
+    }
+    //logOff
+    $scope.logoff = function(){
+      //为完成
+    }
+    //滑动删除
+    $scope.repeatFinish=function(){
+      var target = $('.detail')
+        $.each(target,function(index,obj){
+          console.log($(obj))
+               $(obj).on('click','.right',function(){
+                console.log('rightDel')
+                console.log($(this))
+
+
+               })
+            touch.on($(obj), 'touchstart', function(ev) {
+               ev.preventDefault();
+            });
+            touch.on($(obj), 'swipeleft', function(ev) {
+                obj.lastElementChild.style.display='block';
+               $(obj).css({'webkitTransform':'translate3d(-80px,0,0)','webkitTransition':'all ease 0.5s'});
+                 // $scope.rightDel = function(){
+                 //                      // $http({
+                 //    //   url:baseUrl + 'delAll_car',
+                 //    //   method:'post',
+                 //    //   data:data = _data
+                 //    // }).success(function(response){
+                 //    //     if(response=='1'){
+                 //    //       location.reload()
+                 //    //     }
+                 //    // })
+                 // }
+                touch.on($(obj), 'swiperight', function(ev) {
+                   $(obj).css({'webkitTransform':'translate3d(0,0,0)','webkitTransition':'all ease 0.2s'});
+                   obj.lastElementChild.webkitTransition = 'all ease 0.3s';
+                    obj.lastElementChild.style.display='none';
+               });
+            });
+
+        })
     }
 
 }])

@@ -41,7 +41,7 @@ globalapp.filter('range', function(){
 //循环完毕后执行
 globalapp.directive('repeatFinish', function () {
     return {
-    	restrict: 'A',
+    	restrict: 'AC',
         link: function (scope, element, attrs) {
         	// console.log(scope.$last);
             if (scope.$last === true) {

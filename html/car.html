@@ -12,6 +12,7 @@
   <script src="../client_js/global.js"></script>
   <script src="../client_js/car.js"></script>
   <script src="../client_js/getUrl.js"></script>
+  <script src="../libs/touch.js/js/touch.min.js"></script>
 </head>
 <body>
 <div class="mz_car" ng-app="myApp" ng-controller="myController">
@@ -21,7 +22,7 @@
       <div class="active">订单</div>
       <div>抵用券</div>
     </div>
-    <div class="mz_cancle">注销</div>
+    <div class="mz_cancle" ng-click='logoff'>注销</div>
   </div>
   <div class="mz_nav">
     <ul>
@@ -37,7 +38,7 @@
         <li ng-repeat="(key,value) in CarData" class="list">
           <ul>
               <li class="title"><h3>{{value.name}}</h3><span></span></li>
-              <li class="detail"'>
+              <li class="detail repeatFinish" >
                 <div class="img"><img data-ui-lazyload="{{value.room_img}}"></div>
                 <div class="name">
                   <h3 class="title name">{{value.room_type}}</h3>
@@ -49,6 +50,7 @@
                       <p class="realPay">实付<span>${{value.room_price}}</span></p>
                   </div>
                 </div>
+                <div class="right">删除</div>
               </li>
           </ul>
         </li>
