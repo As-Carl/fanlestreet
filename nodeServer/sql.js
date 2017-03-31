@@ -56,7 +56,7 @@ module.exports = {
 		var sqlconnect = mysql.createConnection({
 		  host: obj.host ? obj.host : 'localhost',
 		  user: obj.user ? obj.user : 'root',
-		  password: obj.password ? obj.password : '',
+		  password: obj.password ? obj.password : 'root',
 		  database: data.DatabaseName
 		});
 		sqlconnect.connect();
@@ -88,7 +88,7 @@ module.exports = {
     var sqlconnect = mysql.createConnection({
       host: obj.host ? obj.host : 'localhost',
 		  user: obj.user ? obj.user : 'root',
-		  password: obj.password ? obj.password : '',
+		  password: obj.password ? obj.password : 'root',
       database: obj.DatabaseName
     });
     sqlconnect.connect();
@@ -111,7 +111,7 @@ module.exports = {
 		var sqlconnect = mysql.createConnection({
 		  host: obj.host ? obj.host : 'localhost',
 		  user: obj.user ? obj.user : 'root',
-		  password: obj.password ? obj.password : '',
+		  password: obj.password ? obj.password : 'root',
 		  database: data.DatabaseName
 		});
 		sqlconnect.connect();
@@ -132,7 +132,7 @@ module.exports = {
     var sqlconnect = mysql.createConnection({
       host: obj.host ? obj.host : 'localhost',
       user: obj.user ? obj.user : 'root',
-      password: obj.password ? obj.password : '',
+      password: obj.password ? obj.password : 'root',
       database: data.DatabaseName
     });
     sqlconnect.connect();
