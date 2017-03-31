@@ -8,6 +8,7 @@
   <link rel="stylesheet" type="text/css" href="../css/detail.css">
   <script src="../libs/jquery/jquery-2.1.1.min.js"></script>
   <script src="../libs/angular/angular.min.js"></script>
+  <script src="../libs/angular/lazyload.js"></script>
   <script src="../client_js/detail-event.js"></script>
   <script src="../client_js/getUrl.js"></script>
 </head>
@@ -31,7 +32,7 @@
           <img src="../img/1001.jpg" alt="">
         </div>
         <div class="header-left">
-          <i></i>
+          <i ng-click="golink()"></i>
         </div>
         <div class="header-right">
           <i ng-click="hide()"></i>
@@ -101,7 +102,7 @@
       <div class="detail-hotel clear" ng-repeat='(key, value) in showdata'>
         <a class="hotel-prepay--item" >
           <div>
-            <img src="../img/1001.jpg" ng-bind="response[i].room_id">
+            <img  data-ui-lazyload="{{value.room_img}}">
           </div>
           <div>
             <div>
@@ -175,7 +176,7 @@
   <div class="hotel-reviews">
     <div class="review clear" ng-repeat="(key,value) in showdata">
       <div class="user-pic">
-        <img  src="../img/1001.jpg">
+        <img  ng-src="{{value.room_img}}">
       </div>
       <div class="hotel-content">
         <div class="review-header">

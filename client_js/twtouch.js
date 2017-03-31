@@ -35,20 +35,22 @@
     var self = this;
     var boolR, boolL , boolB, boolT;
     document.addEventListener('touchmove', function(event){
-        if(startX - event.touches[0].pageX < 0){
+      var x=startX - event.touches[0].pageX;
+      var y=startY - event.touches[0].pageY;
+        if(startX - event.touches[0].pageX < 0&&Math.abs(x) > Math.abs(y)){
           // self.toRight();
            boolR = true;
-        } else if(startX - event.touches[0].pageX > 0){
+        } else if(startX - event.touches[0].pageX > 0&&Math.abs(x) > Math.abs(y)){
           // self.toLeft();
           boolL = true;
         }
 
-        if(startY - event.touches[0].pageY < 0){
+        if(startY - event.touches[0].pageY < 0&&Math.abs(x) < Math.abs(y)){
           // self.toBottom();
           // console.log(startY - event.touches[0].pageY)
 
           boolB = true;
-        } else if(startY - event.touches[0].pageY > 0){
+        } else if(startY - event.touches[0].pageY > 0&&Math.abs(x) < Math.abs(y)){
             // self.toTop();
             // console.log(startY - event.touches[0].pageY)
             boolT = true;

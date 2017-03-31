@@ -6,6 +6,7 @@
 	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" name="viewport" />
 	<title>Document</title>
 	<link rel="stylesheet" href="../css/phone.css">
+	<link rel="stylesheet" href="../libs/Font-Awesome-3.2.1/css/font-awesome.min.css">
 	<link rel="stylesheet" href="../libs/font-Awesome/css/font-awesome.min.css">
 	<script src="../libs/angular/angular.min.js"></script>
 	<script src="../libs/jquery/jquery-2.1.1.min.js"></script>
@@ -18,11 +19,12 @@
 <body ng-app="ywApp" ng-controller="ywController">
 	<div id="all">
 		<div id="header">
-			<a href="10.3.135.8:555/index.html"><i class="icon-chevron-left"></i></a>
+			<a href="./index.html"><i class="icon-chevron-left"></i></a>
 			<div id="h_center">
 				<a href="">商户</a>
 				<a href="">团购</a>
 			</div>
+			<i class="icon-search" id="search" ng-click="search()"></i>
 		</div>
 		<div id="filter">
 			<ul id="range">
@@ -67,7 +69,27 @@
 				</li>
 			</ul>
 		</div>
-		<div id="footer"></div>
+	</div>
+	<div id="server">
+		<div id="s_top">
+			<div id="st_left"><input type="" name=""></div>
+			<div id="lookFor" class="icon-search"></div>
+			<div id="st_right" ng-click="back()">
+				取消
+			</div>
+		</div>
+		<div class="search-hot .clear"> 
+			<div class="search-hot-item">7天连锁酒店</div>
+			<div class="search-hot-item">花园酒店</div>
+			<div class="search-hot-item">白天鹅宾馆</div>
+			<div class="search-hot-item">主题酒店</div>
+			<div class="search-hot-item">如家</div>
+			<div class="search-hot-item">白天鹅</div>
+			<div class="search-hot-item">钟点房</div>
+			<div class="search-hot-item">白云宾馆</div>
+			<div class="search-hot-item">中国大酒店</div> 
+		</div>
+		<div id="record">清空搜索记录</div>
 	</div>
 	<div id="shadow">
 		<i class="fa fa-spinner fa-spin fa-3x fa-fw" id="fa"></i>

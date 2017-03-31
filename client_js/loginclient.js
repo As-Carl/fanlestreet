@@ -19,6 +19,7 @@ app.controller("mycontroller", ["$scope", "$http", function($scope, $http) {
 				//				console.log($scope.user,$scope.code)
 				if(res[i].user == $scope.user && res[i].pwd == $scope.code) {
 					self.location.href = "index.html?userid=" + res[i].userid;
+					isoff = true;
 					return;
 				}
 			}
