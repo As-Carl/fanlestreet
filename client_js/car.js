@@ -33,18 +33,18 @@ myApp.controller('myController', ['$scope', '$http','baseUrl',function($scope,$h
       console.log(123)
       $('.more_mume').css({'display':'block'})
     }
-    //del
-    // $scope.del=function(){
-    //   $http({
-    //     url:baseUrl + 'delAll_car',
-    //     method:'post',
-    //     data:data = _data
-    //   }).success(function(response){
-    //       if(response=='1'){
-    //         location.reload()
-    //       }
-    //   })
-    // }
+    // del
+    $scope.del=function(){
+      $http({
+        url:baseUrl + 'delAll_car',
+        method:'post',
+        data:data = _data
+      }).success(function(response){
+          if(response=='1'){
+            location.reload()
+          }
+      })
+    }
     //back
     $scope.back = function(){
       location.href = 'http://localhost:555/html/index.html'
