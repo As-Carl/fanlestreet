@@ -3,7 +3,7 @@
       var obj={
        linkUrl:'10.7.135.25:555/detail/detail.html',
        pathUrl:'10.7.135.25:555/detail/detail.html?userid=123&goodsid=10001&roomid=80001',
-       needID:["userid","goodsid","roomid"]
+       needID:["userid","goodsid","roomid","place"]
      }
      this.obj=_obj;
      this.obj.pathUrl=location.href;

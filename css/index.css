@@ -58,22 +58,22 @@ a{
 .header .a1 {
   position: relative;
   top:-0.35rem;
-  left:0.17rem;
+  left:0.1rem;
   color: #fff;
   max-width: 0.60rem;
 
 
 }
 .header .a1 span{
-  font-size: 0.15rem;
+  font-size: 0.1rem;
 
 
 }
-.header .a1 i{
+.header .a1 em{
   font-size: 0.25rem;
   color: #296534;
   position: relative;
-  top: 0.05rem;
+  left: 0.35rem;
   margin-left: 0.03rem;
 }
 .header .searchbox{
@@ -403,7 +403,7 @@ a{
 .message .mb .list .lmes p{
   font-size: 0.1rem;
   line-height: 0.14rem;
-  margin-bottom: 0.05rem;
+  margin-bottom: 0.07rem;
   position: relative;
 }
 .message .mb .list .lmes p span{
