@@ -1,0 +1,8 @@
+fanlestreet 项目操作：
+
+A.首先新建一个名为：fanlestreet的数据库，然后执行fanlestreet.sql语句
+
+B.浏览器中输入：http://localhost:555/html/index.html
+
+
+
