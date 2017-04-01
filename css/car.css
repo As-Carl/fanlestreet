@@ -93,6 +93,7 @@ body{font-size:0.173333rem;}
 .mz_nav li{
   width: 25%;
   float: left;
+      line-height: 350%;
 }
 .mz_content{
   padding:0.08rem 0.2rem;
@@ -212,4 +213,17 @@ h3{color: #777;}
     color: #999;
     display: none;
     font-size: 0.226667rem;
+}
+
+.other{
+  background: #fafafa;
+  text-align: center;
+  padding-top: 0.666667rem;
+}
+.other p{
+  margin-top: 0.133333rem;
+}
+.other span{
+    font-size: 30px;
+    color: #777;
 }

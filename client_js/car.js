@@ -8,6 +8,7 @@ var myApp = angular.module('myApp',['globalapp','lazyload']);
 //   };
 // })
 myApp.controller('myController', ['$scope', '$http','baseUrl',function($scope,$http,baseUrl){
+    $('.other').hide()
     var url=new Search({
      // linkUrl:'http://localhost:555/login.html',
      needID:["userid"]
@@ -67,7 +68,6 @@ myApp.controller('myController', ['$scope', '$http','baseUrl',function($scope,$h
                obj.lastElementChild.style.display='block';
                $(obj).css({'webkitTransform':'translate3d(-13%,0,0)','webkitTransition':'all ease 0.5s'});
                  $scope.right_del=function(){
-                  // console.log($(this).get(0).value.room_id + url.init()[0])
                     $http({
                       url:baseUrl + 'del_one',
                       method:'post',
@@ -87,5 +87,18 @@ myApp.controller('myController', ['$scope', '$http','baseUrl',function($scope,$h
 
         })
     }
-
+    //其他模块
+  $('.nav').on('click','li:not(:first-child)',function(){
+    $(this).parent().children().css({'border-bottom':'0px solid #12f7e3'});
+    $(this).css({'border-bottom':'2px solid #12f7e3'})
+    $('.mz_content').hide();
+    $('.other').show();
+  })
+  //第一个li的处理
+  $('.nav').on('click','li:first-child',function(){
+    $(this).parent().children().css({'border-bottom':'0px solid #12f7e3'});
+    $(this).css({'border-bottom':'2px solid #12f7e3'})
+    $('.mz_content').show();
+    $('.other').hide();
+  })
 }])
