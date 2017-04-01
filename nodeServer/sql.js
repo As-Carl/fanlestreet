@@ -63,7 +63,8 @@ module.exports = {
     if(!data.Condition && data.TableName){
       var select = 'select * from '+ data.TableName +''
     }else if(data.Condition){var select = data.Condition}
-	  sqlconnect.query(select, function(err, rows, fields) {
+    sqlconnect.query(select, function(err, rows, fields) {
+      console.log(15678)
 	    if(err) throw err;
       _callback(err,rows)
     });
@@ -136,9 +137,6 @@ module.exports = {
       database: data.DatabaseName
     });
     sqlconnect.connect();
-    // if(!data.Condition && data.TableName){
-    //   var select = 'select * from '+ data.TableName +''
-    // }else if(data.Condition){var select = data.Condition}
     sqlconnect.query(data.Condition, function(err, rows, fields) {
       if(err) throw err;
       _callback(err,rows)

@@ -8,7 +8,7 @@
  margin-bottom:.2rem;
 }
 
-.hotel-Carousel {
+.hotel-Carousel  .swiper-container{
   color: #fff;
 }
 .location{
@@ -24,7 +24,7 @@
 .address{
  padding-right: .2rem;
  line-height: .36rem;
- max-height: .72rem;
+ max-height: .78rem;
  overflow: hidden;
  word-wrap: break-word;
  display: -webkit-box;
@@ -86,6 +86,7 @@
     position: absolute;
     left: 0;
     right:0;
+    z-index:888;
     top:2rem;
     padding: .24rem 0 .24rem .2rem;
 }
@@ -120,7 +121,7 @@
   margin-left: .24rem;
   display: inline-block;
   font-size: .18rem;
-  color:#e1e1e1;
+  color:#e2e2e2;
 }
 .detail-list{
   font-size: .13rem;
@@ -268,7 +269,7 @@ margin-right: .1rem;
   color:#fff;
 }
 .hotel--more{
-     font-size: .18rem;
+    font-size: .18rem;
     display: block;
     text-align: center;
     margin-top: .15rem;
@@ -277,6 +278,8 @@ margin-right: .1rem;
 .hotel--more .hotel--more-text{
   color:#999;
 }
+
+
 
 
 /*点贊*/
@@ -289,8 +292,7 @@ margin-right: .1rem;
   margin: 0 .3rem;
   font-size: .2rem;
   color: #999;
-  border-bottom: 1px solid
-  #d7d7d7;
+  border-bottom: 1px solid #d7d7d7;
 }
 
 .hotel-set-screen .hotel-set-screen-title .set-icon{
@@ -424,7 +426,6 @@ margin-right: .1rem;
   border-top: 1px solid #e1e1e1;
   border-bottom: 1px solid #e1e1e1;
   margin-top: .3rem;
-  margin-bottom: .3rem;
   padding: .1rem 0;
   background-color: #fff;
   display: -webkit-box;
@@ -518,4 +519,33 @@ margin-right: .1rem;
   width:1rem;
   height:1rem;
   background:url(../img/2013.png) no-repeat;
+}
+
+.bottomMore{
+  width:100%;
+  min-height:4.6rem;
+  position:relative;
+}
+.net_say{
+  margin-top:0.01rem;
+  width:100%;
+  min-height:4rem;
+  border: 0px solid #f0f0f0;
+  text-indent:.3rem;
+  font-size:.3rem;
+  outline: none;
+  box-shadow:1px 1px #ccc;
+  background-color:rgba(0,0,0,0.1);
+}
+.bottomMore button{
+  width:1.2rem;
+  height:.6rem;
+  font-size:.24rem;
+  position:absolute;
+  margin-top:-.3rem;
+  border-radius:.1rem;
+  outline:none;
+  left:50%;
+  margin-left:-.6rem;
+  background-color:#12f7e3;
 }

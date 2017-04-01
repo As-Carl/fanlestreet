@@ -13,10 +13,19 @@ exports.router = function(app){
   app.use(express.static(path.join(__dirname, '/')));
   //详情页获取数据部分
   app.get('/detail', function(request, response){
-  sql.get({'DatabaseName':'fanlestreet','Condition':"SELECT * FROM room_hotel_info LEFT JOIN goods ON goods.goodsid=room_hotel_info.goodsid"},function(err,data){
+  sql.get({'DatabaseName':'fanlestreet','Condition':"SELECT * FROM room_hotel_info LEFT JOIN goods ON goods.goodsid=room_hotel_info.goodsid "},function(err,data){
     response.send(data);
   });
 });
+//更多加载内容
+app.get('/more', function(request, response){
+sql.get({'DatabaseName':'fanlestreet','Condition':"SELECT * FROM room_hotel_info LEFT JOIN goods ON goods.goodsid=room_hotel_info.goodsid "},function(err,data){
+    response.send(data);
+  });
+});
+
+
+
   //写数据到数据库
   app.post("/insert",urlencodedParser,function(request,response){
     sql.insert({

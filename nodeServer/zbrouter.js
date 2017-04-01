@@ -15,7 +15,7 @@ exports.router = function(app) {
 		db.chart({
 			"host": "localhost",
 			"user": "root",
-			"password": "",
+			"password":'',
 			"database": "fanlestreet",
 			"table": "login",
 			"selected": "*",
@@ -30,7 +30,7 @@ exports.router = function(app) {
 		db.chart({
 			"host": "localhost",
 			"user": "root",
-			"password": "",
+			"password":'',
 			"database": "fanlestreet",
 			"table": "goods",
 			"selected": "*",
