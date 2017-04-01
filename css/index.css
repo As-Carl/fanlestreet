@@ -58,22 +58,22 @@ a{
 .header .a1 {
   position: relative;
   top:-0.35rem;
-  left:0.17rem;
+  left:0.1rem;
   color: #fff;
   max-width: 0.60rem;
 
 
 }
 .header .a1 span{
-  font-size: 0.15rem;
+  font-size: 0.1rem;
 
 
 }
-.header .a1 i{
+.header .a1 em{
   font-size: 0.25rem;
   color: #296534;
   position: relative;
-  top: 0.05rem;
+  left: 0.35rem;
   margin-left: 0.03rem;
 }
 .header .searchbox{
@@ -343,12 +343,15 @@ a{
   height: auto;
 }
 .message .mt li h4{
-  font-size: 0.16rem;
-  margin: 0.05rem;
+  font-size: 0.14rem;
+  margin-left: 0.1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .message .mt li p{
   margin: 0.05rem;
-  font-size: 0.18rem;
+  font-size: 0.14rem;
   color:orange;
 }
 .message .mt li p i{
@@ -391,18 +394,21 @@ a{
   margin-left: 0.06rem;
 }
 .message .mb .list .lmes h4{
-  font-size: 0.18rem;
+  font-size: 0.15rem;
   margin-bottom: 0.05rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .message .mb .list .lmes p{
-  font-size: 0.14rem;
-  line-height: 0.16rem;
-  margin-bottom: 0.05rem;
+  font-size: 0.1rem;
+  line-height: 0.14rem;
+  margin-bottom: 0.07rem;
   position: relative;
 }
 .message .mb .list .lmes p span{
   color:orange;
-  font-size: 0.2rem;
+  font-size: 0.18rem;
 }
 .message .mb .list .lmes p
 i{
@@ -412,16 +418,17 @@ i{
 em{
   position: absolute;
   right: 0;
-  font-size: 0.16rem;
+  font-size: 0.12rem;
 }
 .message .mb .list .lmes a{
   background:#cbefeb;
   text-align: center;
   color:#3e3434;
   display: block;
+  font-size: 0.1rem;
   width:1rem;
   height: auto;
-  padding: 0.05rem;
+  padding: 0.01rem;
   border-radius: 0.1rem;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -493,30 +500,30 @@ em{
   }
 }
 @media screen and (max-height: 1400px)and (min-height:1200px){
-.select{
-  min-height:4.6rem;
-}
+  .select{
+    min-height:4.6rem;
+  }
 }
 @media screen and (max-height: 700px)and (min-height:900px){
   body{
     font-size:700%;
   }
-.select{
-  min-height:3.5rem;
-}
+  .select{
+    min-height:3.5rem;
+  }
 }
 
 @media screen and (max-height: 323px)and (min-height:480px){
 
   .select{
-  min-height:2.3rem;
-}
+    min-height:2.3rem;
+  }
 
 }
 @media screen and (max-height: 323px){
   .select{
-  min-height:1.9rem;
-}
+    min-height:1.9rem;
+  }
   .select ul li{
     margin-bottom: 0.1rem;
   }
@@ -549,5 +556,5 @@ em{
 
 @media screen and (max-height: 600px) and (min-height: 480px)
 .select {
-    min-height: 2rem;
+  min-height: 2rem;
 }

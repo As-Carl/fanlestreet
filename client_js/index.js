@@ -2,12 +2,24 @@ var twApp = angular.module('twApp',['lazyload']);
 var twController = twApp.controller('twController',['$scope', '$http',function($scope,$http){
 
   document.getElementsByClassName('mask')[0].style.display = 'block';
+
      $http.get('http://localhost:555/index').success(function(data){
         // console.log(data)
         $scope.datas=data;
         document.getElementsByClassName('mask')[0].style.display = 'none';
+
+
+
         $scope.twhref = location.search;
-        // console.log($scope.twhref)
+        console.log($scope.twhref)
+        var place=new Search({needID:['place']})
+
+        console.log(place)
+       if( $scope.twhref.indexOf('place')>-1){
+        var pn =  decodeURIComponent(place.init());
+        $('.header').find('span').html(pn)
+       }
+
         if(!$scope.twhref){
          $scope.twhref = '';
          $('.link').click(function(){

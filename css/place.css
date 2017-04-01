@@ -38,29 +38,35 @@ a{
   background: #fff;
 }
 .head a{
- font-size: 0.58rem;
+ font-size: 0.4rem;
  float: left;
- width: 20%;
- height: 100%;
- color: #43e5ef;
+ width: 15%;
+ height: 20%;
+
+transform: rotateY(-180deg)
+}
+a img{
+  width: 0.32rem;
+  height: auto;
 
 }
 .head .hr{
- width: 65%;
- font-size: 0.32rem;
- float: left;
- text-align: center;
- height: 100%;
- color: #43e5ef;
+  width: 44%;
+  font-size: 0.32rem;
+  float: left;
+  text-align: center;
+  height: 100%;
+  color: #43e5ef;
 }
 .head .hr p{
   border-radius: 0.1rem;
+  font-size: 0.18rem;
 // border: 1px solid #43e5ef;
 }
 .head .hr p span{
-  padding:0.05rem;
-  border: 1px solid  #43e5ef;
-  border-radius:0 0.1rem  0.1rem 0;
+  padding: 0.04rem 0.15rem;
+  border: 1px solid #43e5ef;
+  border-radius: 0 0.1rem 0.1rem 0;
 }
 .head .hr p .active{
   background: #43e5ef;
@@ -68,48 +74,47 @@ a{
   border-radius:0.1rem 0  0 0.1rem;
 
 }
-
-.search{
-  background: #fff;
-  margin: 0.1rem 0;
-  width: 100%;
-  text-align: center;
-  height: 0.5rem;
-  position: relative;
-
-}
-.search .ss{
-  width: 80%;
+.ss{
+  width: 40%;
   height: 100%;
-  position: absolute;
-  top: -0.75rem;
-  left: 0.4rem;
-
+  line-height: 35%;
+  text-align: center;
+  float: left;
+  position: relative;
 }
-.search .ss i{
+.ss i{
   position: absolute;
   top: 0.07rem;
-  left: 0.7rem;
+  left: 0.35rem;
 }
-.search .ss input{
+.ss input{
   outline: none;
   border: 1px solid #ccc;
-  height: 0.4rem;
-  width: 60%;
-  padding-left: 0.6rem;
+  height: 0.3rem;
+  width: 57%;
+  padding-left: 0.4rem;
   border-radius: 0.1rem;
-  color:#07494c;
-
+  color: #07494c;
 }
+
+
 .get{
-  font-size: 0.3rem;
+  font-size: 0.14rem;
   width: 100%;
-  height: 1rem;
-  text-align: center;
+  height: 0.5rem;
+  line-height: 0.5rem;
   margin: 0.1rem 0;
-  line-height: 1rem;
   background: #fff;
-  color:#1a797d;
+  color: #1a797d;
+}
+.get p {
+  margin: 0.1rem;
+}
+
+.home-place-list{
+  width: 100%;
+  height: auto;
+  background: #fafafa;
 }
 .twhotcity{
   width: 100%;
@@ -117,18 +122,19 @@ a{
   background: #fff;
   font-size: 0.20rem;
 }
- .twcitylist{
+.twcitylist{
   width: 100%;
   height: auto;
-  background: #fff;
+  background: #fafafa;
 }
-  li{
+li{
   float: left;
   font-size: 0.20rem;
-  width: 24.3%;
-  height: 0.3rem;
+  width: 23.3%;
+  height: 0.23rem;
   border: 0.02rem solid #eee;
   color:#fff;
+  margin: 0.02rem;
   text-align: center;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -139,16 +145,18 @@ a{
 .hot-trade ul{
   width: 100%;
   height: auto;
-  background:#fff;
+  background:#;
 }
 .hd{
-  font-size: 0.25rem;
-  margin: 0.1rem 0 ;
+  font-size: 0.18rem;
+  margin: 0.1rem 0.05rem;
   color: #397679;
 }
 li a{
-font-size: 0.25rem;
-color:#07494c;
+  font-size: 0.16rem;
+  text-align: center;
+  color: #323232;
+  margin: 0 2px;
 }
 @media screen and (max-width: 480px){
 

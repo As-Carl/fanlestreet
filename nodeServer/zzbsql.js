@@ -36,7 +36,7 @@ module.exports = {
 		var sqlconnect = mysql.createConnection({
 			host: obj.host || 'localhost',
 			user: obj.user || 'root',
-			password: obj.password || '',
+			password: obj.password ||'',
 			database: obj.database || 'fanlestreet'
 		});
 		sqlconnect.connect();

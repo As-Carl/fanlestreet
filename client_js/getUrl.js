@@ -1,9 +1,9 @@
 
     function Search(_obj){
       var obj={
-       linkUrl:'10.3.135.8:555/detail/detail.html',
-       pathUrl:'10.3.135.8:555/detail/detail.html?userid=123&goodsid=10001&roomid=80001',
-       needID:["userid","goodsid","roomid"]
+       linkUrl:'10.7.135.25:555/detail/detail.html',
+       pathUrl:'10.7.135.25:555/detail/detail.html?userid=123&goodsid=10001&roomid=80001',
+       needID:["userid","goodsid","roomid","place"]
      }
      this.obj=_obj;
      this.obj.pathUrl=location.href;

@@ -1,12 +1,16 @@
 /*
+2017/3/31:修改默认的数据库用户名和密码
+需要修改时可以修改变量：psw,user,host
+
 2017年3月25日
+auhtor：hzm
 使用提示:
 引入模块
 var sql = require('./sql');
 默认数据库用户名和密码
 host: 'localhost',
-		  user: 'root',
-		  password: ''
+user: 'root',
+password: ''
 
 -----get获取数据库数据(用户名和密码可以不填)------
 默认查询所有：sql.get({'host':'localhost','user':'root','password':'','DatabaseName':'数据库名称','TableName':'表名称'},function(err,data){
@@ -46,6 +50,9 @@ sql.updata({'DatabaseName':'phoneproject','Condition':'UPDATE goods SET price=99
 Condition：sql语句
  */
 var mysql = require('mysql');
+var psw = '';
+var user = 'root';
+var host = 'localhost';
 module.exports = {
 	 get: function(data,_callback){
 	 	if(typeof data == 'object'){
@@ -54,9 +61,9 @@ module.exports = {
 			var obj = JSON.parse(data)
 		}else{console.log('请输入对象或者json格式的字符串')}
 		var sqlconnect = mysql.createConnection({
-		  host: obj.host ? obj.host : 'localhost',
-		  user: obj.user ? obj.user : 'root',
-		  password: obj.password ? obj.password : '',
+		  host: obj.host ? obj.host : host,
+		  user: obj.user ? obj.user : user,
+		  password: obj.password ? obj.password : psw,
 		  database: data.DatabaseName
 		});
 		sqlconnect.connect();
@@ -87,9 +94,9 @@ module.exports = {
     var strResult = 'INSERT INTO ' + obj.TableName + '('+ str +') VALUES ' + '('+ str1 + ')'
     console.log(strResult)
     var sqlconnect = mysql.createConnection({
-      host: obj.host ? obj.host : 'localhost',
-		  user: obj.user ? obj.user : 'root',
-		  password: obj.password ? obj.password : '',
+      host: obj.host ? obj.host : host,
+      user: obj.user ? obj.user : user,
+		  password: obj.password ? obj.password : psw,
       database: obj.DatabaseName
     });
     sqlconnect.connect();
@@ -110,9 +117,9 @@ module.exports = {
 			var obj = JSON.parse(data)
 		}else{console.log('请输入对象或者json格式的字符串')}
 		var sqlconnect = mysql.createConnection({
-		  host: obj.host ? obj.host : 'localhost',
-		  user: obj.user ? obj.user : 'root',
-		  password: obj.password ? obj.password : '',
+		  host: obj.host ? obj.host : host,
+      user: obj.user ? obj.user : user,
+		  password: obj.password ? obj.password : psw,
 		  database: data.DatabaseName
 		});
 		sqlconnect.connect();
@@ -131,9 +138,9 @@ module.exports = {
       var obj = JSON.parse(data)
     }else{console.log('请输入对象或者json格式的字符串')}
     var sqlconnect = mysql.createConnection({
-      host: obj.host ? obj.host : 'localhost',
-      user: obj.user ? obj.user : 'root',
-      password: obj.password ? obj.password : '',
+      host: obj.host ? obj.host : host,
+      user: obj.user ? obj.user : user,
+      password: obj.password ? obj.password : psw,
       database: data.DatabaseName
     });
     sqlconnect.connect();
