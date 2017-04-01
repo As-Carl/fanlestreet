@@ -50,7 +50,7 @@ body{font-size:0.173333rem;}
 }
 .mz_head .toIndex span{
     display: inline-block;
-    border: 2px solid #12f7e3;
+    border: 2px solid #777;
     width: 0.16rem;
     height: 0.16rem;
     border-top: none;
@@ -88,7 +88,6 @@ body{font-size:0.173333rem;}
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /*border-bottom: 0.013333rem solid #ccc;*/
   box-shadow:0.013333rem 0.013333rem 0.04rem #ccc;
 }
 .mz_nav li{
@@ -96,8 +95,10 @@ body{font-size:0.173333rem;}
   float: left;
 }
 .mz_content{
-  padding: 0.2rem;
+  padding:0.08rem 0.2rem;
 }
+h3{color: #777;}
+.mz_content .empty_car{text-align: center;margin-top: 0.066667rem}
 .mz_content .empty{
   text-align: center;
 }
@@ -108,10 +109,18 @@ body{font-size:0.173333rem;}
     vertical-align: bottom;
 }*/
 .mz_content .empty{
-    color: #777;
+    color: #888;
     display: inline-block;
     line-height: 0.466667rem;
+    /*text-shadow: 0px 1px 4px #999;*/
+    font-size: 16px;
+    text-indent: 0.08rem;
 }
+.mz_content .fa-cart-plus{
+    font-size: 0.253333rem;
+    color: #888;
+}
+
 .mz_content .list{margin-bottom: 0.133333rem}
 .mz_content .title{
   margin-bottom: 0.106667rem;
@@ -133,9 +142,10 @@ body{font-size:0.173333rem;}
 }
 .mz_content .detail .title{}
 .mz_content .detail .name{
-margin-right: 0.2rem;
-max-width: 1.333333rem;
-display: block;
+    margin-right: 0.15rem;
+    max-width: 1.333333rem;
+    min-width: 0.773333rem;
+    display: block;
 }
 .mz_content .detail .pay,.mz_content .detail .realPay{
   display: inline-block;
@@ -173,7 +183,7 @@ display: block;
   display: none;
 }
 .more_mume .del,.more_mume .cancel{
-  font-size: 0.32rem;
+  font-size: 0.24rem;
   color: #777;
   position: fixed;
   width: 95%;
@@ -193,13 +203,13 @@ display: block;
 
 .right{
     text-align: center;
-    height: 1.066667rem;
-    width: 1.066667rem;
-    line-height: 1.066667rem;
+    width: 22%;
+    line-height: 0;
     position: absolute;
-    right: -1.066667rem;
+    right: -19%;
     background: #12f7e3;
     font-size: 0.266667rem;
-    color: #777;
+    color: #999;
     display: none;
+    font-size: 0.226667rem;
 }

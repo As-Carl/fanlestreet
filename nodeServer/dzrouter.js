@@ -40,10 +40,16 @@ exports.router = function(app){
   });
   //购物车删除数据
     app.post("/delAll_car",urlencodedParser,function(request,response){
-      console.log()
+      // console.log()
       // console.log(request.body);
-      sql.delete({'DatabaseName':'fanlestreet','TableName':'relation','Condition':'userid='+request.body.userid+''},function(res,data){
-        response.send('1')
-      })
-  })
+        sql.delete({'DatabaseName':'fanlestreet','TableName':'relation','Condition':'userid='+request.body.userid+''},function(res,data){
+          response.send('1')
+        })
+    })
+    //购物车删除单挑数据
+    app.post("/del_one",urlencodedParser,function(request,response){
+        sql.delete({'DatabaseName':'fanlestreet','TableName':'relation','Condition':'userid='+request.body.userid+' and room_id='+request.body.room_id+' limit 1'},function(res,data){
+          response.send('1')
+        })
+    })
 };

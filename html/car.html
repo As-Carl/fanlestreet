@@ -17,7 +17,7 @@
 <body>
 <div class="mz_car" ng-app="myApp" ng-controller="myController">
   <div class="mz_head">
-    <div class="toIndex"><span></span><a href="#" ng-click='back()'>首页</a></div>
+    <div ng-click='back()' class="toIndex"><span></span><a href="#">首页</a></div>
     <div class="tab">
       <div class="active">订单</div>
       <div>抵用券</div>
@@ -34,7 +34,9 @@
   </div>
   <div class="mz_content">
     <ul>
-        <li class="empty"></li>
+        <li class="empty_car"><span class="fa fa-cart-plus" >
+          <span class="empty"></span>
+        </span></li>
         <li ng-repeat="(key,value) in CarData" class="list">
           <ul>
               <li class="title"><h3>{{value.name}}</h3><span></span></li>
@@ -50,7 +52,7 @@
                       <p class="realPay">实付<span>${{value.room_price}}</span></p>
                   </div>
                 </div>
-                <div class="right">删除</div>
+                <div class="right" ng-click="right_del()">删除</div>
               </li>
           </ul>
         </li>
