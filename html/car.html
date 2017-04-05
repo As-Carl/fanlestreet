@@ -17,7 +17,7 @@
 <body>
 <div class="mz_car" ng-app="myApp" ng-controller="myController">
   <div class="mz_head">
-    <div class="toIndex"><span></span><a href="#" ng-click='back()'>首页</a></div>
+    <div ng-click='back()' class="toIndex"><span></span><a href="#">首页</a></div>
     <div class="tab">
       <div class="active">订单</div>
       <div>抵用券</div>
@@ -25,16 +25,18 @@
     <div class="mz_cancle" ng-click='logoff'>注销</div>
   </div>
   <div class="mz_nav">
-    <ul>
+    <ul class="nav">
         <li>全部订单</li>
-        <li>代付款</li>
-        <li>可使用</li>
-        <li>退款/售后</li>
+        <li ng-click='otherpay()'>代付款</li>
+        <li ng-click='canuse()'>可使用</li>
+        <li ng-click='server()'>退款/售后</li>
     </ul>
   </div>
   <div class="mz_content">
     <ul>
-        <li class="empty"></li>
+        <li class="empty_car"><span class="fa fa-cart-plus" >
+          <span class="empty"></span>
+        </span></li>
         <li ng-repeat="(key,value) in CarData" class="list">
           <ul>
               <li class="title"><h3>{{value.name}}</h3><span></span></li>
@@ -50,12 +52,16 @@
                       <p class="realPay">实付<span>${{value.room_price}}</span></p>
                   </div>
                 </div>
-                <div class="right">删除</div>
+                <div class="right" ng-click="right_del()">删除</div>
               </li>
           </ul>
         </li>
         <li class="footer"><span class="toBuy">买单</span><span class="more" ng-click='more()'>更多</span></li>
     </ul>
+  </div>
+  <div class="other">
+  <span class="fa fa-exclamation-circle"></span>
+    <p>抱歉，此功能暂未开放</p>
   </div>
   <div class="more_mume" >
     <div class="del" ng-click="del()">删除所有订单</div>

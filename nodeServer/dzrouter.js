@@ -13,10 +13,19 @@ exports.router = function(app){
   app.use(express.static(path.join(__dirname, '/')));
   //详情页获取数据部分
   app.get('/detail', function(request, response){
-  sql.get({'DatabaseName':'fanlestreet','Condition':"SELECT * FROM room_hotel_info LEFT JOIN goods ON goods.goodsid=room_hotel_info.goodsid"},function(err,data){
+  sql.get({'DatabaseName':'fanlestreet','Condition':"SELECT * FROM room_hotel_info LEFT JOIN goods ON goods.goodsid=room_hotel_info.goodsid "},function(err,data){
     response.send(data);
   });
 });
+//更多加载内容
+app.get('/more', function(request, response){
+sql.get({'DatabaseName':'fanlestreet','Condition':"SELECT * FROM room_hotel_info LEFT JOIN goods ON goods.goodsid=room_hotel_info.goodsid "},function(err,data){
+    response.send(data);
+  });
+});
+
+
+
   //写数据到数据库
   app.post("/insert",urlencodedParser,function(request,response){
     sql.insert({
@@ -40,10 +49,16 @@ exports.router = function(app){
   });
   //购物车删除数据
     app.post("/delAll_car",urlencodedParser,function(request,response){
-      console.log()
+      // console.log()
       // console.log(request.body);
-      sql.delete({'DatabaseName':'fanlestreet','TableName':'relation','Condition':'userid='+request.body.userid+''},function(res,data){
-        response.send('1')
-      })
-  })
+        sql.delete({'DatabaseName':'fanlestreet','TableName':'relation','Condition':'userid='+request.body.userid+''},function(res,data){
+          response.send('1')
+        })
+    })
+    //购物车删除单挑数据
+    app.post("/del_one",urlencodedParser,function(request,response){
+        sql.delete({'DatabaseName':'fanlestreet','TableName':'relation','Condition':'userid='+request.body.userid+' and room_id='+request.body.room_id+' limit 1'},function(res,data){
+          response.send('1')
+        })
+    })
 };

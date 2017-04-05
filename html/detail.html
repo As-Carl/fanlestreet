@@ -4,11 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
   <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="../libs/swiper/swiper.min.css">
+  <link rel="stylesheet" type="text/css" href="../libs/animate.css/animate.min.css">
   <link rel="stylesheet" type="text/css" href="../css/dh_common.css">
   <link rel="stylesheet" type="text/css" href="../css/detail.css">
   <script src="../libs/jquery/jquery-2.1.1.min.js"></script>
   <script src="../libs/angular/angular.min.js"></script>
   <script src="../libs/angular/lazyload.js"></script>
+  <script src="../libs/swiper/swiper.min.js"></script>
   <script src="../client_js/detail-event.js"></script>
   <script src="../client_js/getUrl.js"></script>
 </head>
@@ -29,7 +32,13 @@
     <div class="dh-detail-header">
       <div class="head">
         <div class="hotel-Carousel">
-          <img src="../img/1001.jpg" alt="">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="../img/1001.jpg"></div>
+              <div class="swiper-slide"><img src="../img/h3005.jpg"></div>
+              <div class="swiper-slide"><img src="../img/h4004.jpg"></div>
+            </div>
+          </div>
         </div>
         <div class="header-left">
           <i ng-click="golink()"></i>
@@ -38,7 +47,7 @@
           <i ng-click="hide()"></i>
         </div>
         <div class="header-info">
-          <div class="header-info-title">
+          <div class="header-info-title bounceInDown">
             <span ng-bind='showdata[0].name'></span>
           </div>
           <div class="rank">
@@ -100,7 +109,7 @@
         <button class="filter-btn">双床 </button>
       </div>
       <div class="detail-hotel clear" ng-repeat='(key, value) in showdata'>
-        <a class="hotel-prepay--item" >
+        <a class="hotel-prepay--item clear" >
           <div>
             <img  data-ui-lazyload="{{value.room_img}}">
           </div>
@@ -125,8 +134,8 @@
            </div>
          </a>
        </div>
-       <a class="hotel--more">
-        <span class="hotel--more-text">更多25个房型...</span>
+       <a class="hotel--more clear">
+        <span class="hotel--more-text">更多{{num}}个房型...</span>
       </a>
     </div>
     <div class="hotel-set-screen">
@@ -201,10 +210,10 @@
         </div>
     </div>
      </div>
-    <div class="check-all"> 查看全部网友点评...</div>
+    <div class="check-all" > 查看全部网友点评...</div>
 
   <div class="hotel-review-operation">
-    <a class="operation">
+    <a class="operation"  ng-click='toggle()'>
       <div class="comment-pic"></div>
       <p>写点评</p>
     </a>
@@ -213,6 +222,9 @@
     <p>传图片</p>
     </a>
   </div>
+   <div class="bottomMore">
+    <div class="write--more">
+     <textarea class="net_say"></textarea><button ng-click='send()'>send</button>
   </div>
 </div>
 </body>

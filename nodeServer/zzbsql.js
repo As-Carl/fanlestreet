@@ -4,7 +4,7 @@ var mysql = require('mysql');
 var defaults = {
 	"host": "localhost",
 	"user": "root",
-	"password": "",
+	"password":'',
 	"database": "fanlestree",
 	"table": "goods",
 	"select": "*",
@@ -15,7 +15,7 @@ module.exports = {
 		var defaults = {
 			"host": "localhost",
 			"user": "root",
-			"password": "",
+			"password":'',
 			"database": "fanlestree",
 			"table": "goods",
 			"selected": "*", //按需查询 id/name/...
