@@ -3,6 +3,7 @@ $(function(){
     // console.log(this);
     var place  = $(this).find('a').html()
   $('.get').find('em').html($(this).find('a').html());
+
   document.location.href = '#top'
   // console.log(111);
 

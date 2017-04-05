@@ -39,6 +39,9 @@ var twController = twApp.controller('twController',['$scope', '$http',function($
           console.log(111);
           location.href =  "http://localhost:555/html/list.html"+$scope.twhref ;
         })
+     $('.a1').click(function(){
+         location.href ="http://localhost:555/html/place.html"+$scope.twhref;
+     })
 
    })
 
