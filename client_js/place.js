@@ -5,9 +5,9 @@ $(function(){
   $('.get').find('em').html($(this).find('a').html());
 
   document.location.href = '#top'
-  // console.log(111);
+  // console.log(111);place=+place
 
-    document.location.href = "http://localhost:555/html/index.html?place=" +place;
+    document.location.href = "http://localhost:555/html/index.html?" ;
 
 })
 
