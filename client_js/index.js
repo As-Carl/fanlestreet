@@ -12,13 +12,13 @@ var twController = twApp.controller('twController',['$scope', '$http',function($
 
         $scope.twhref = location.search;
         console.log($scope.twhref)
-        var place=new Search({needID:['place']})
+        // var place=new Search({needID:['place']})
 
-        console.log(place)
-       if( $scope.twhref.indexOf('place')>-1){
-        var pn =  decodeURIComponent(place.init());
-        $('.header').find('span').html(pn)
-       }
+        $('.header').find('span').html(localStorage.getItem("place"))
+       // if( $scope.twhref.indexOf('place')>-1){
+       //  var pn =  decodeURIComponent(place.init());
+       //  $('.header').find('span').html(pn)
+       // }
 
         if(!$scope.twhref){
          $scope.twhref = '';
@@ -30,6 +30,9 @@ var twController = twApp.controller('twController',['$scope', '$http',function($
             location.href =  "http://localhost:555/html/car.html"+$scope.twhref ;
            })
         }
+
+
+
         $('.s1').on('touchstart','li',function(){
           console.log(111);
           location.href =  "http://localhost:555/html/list.html"+$scope.twhref ;
